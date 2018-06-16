@@ -1,0 +1,20 @@
+<view class="top row-view">
+  <view class='top-item col-view {{useBtnClass}}' bindtap='useBtnClick'>可使用</view>
+  <view class='top-item col-view {{unabelBtnClass}}' bindtap='unableBtnClick'>已失效</view>
+
+</view>
+<view class='content col-view '>
+  <view wx:for="{{orderArr}}" wx:key="id">
+    <view class='order-item boxsize'>
+      <view class='order-top col-view boxsize'>{{item.top}}</view>
+      <view class='order-content row-view'>
+        <image src="{{item.url}}"></image>
+        <view class='order-detail col-view boxsize'>
+          <label class='order-title'>{{item.title}}</label>
+          <label class='order-next'>下一节：{{item.next}}</label>
+          <label class='order-complete'>已完成：{{item.complete}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

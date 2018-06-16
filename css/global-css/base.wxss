@@ -1,0 +1,27 @@
+.boxsize {
+  box-sizing: border-box;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.row-view {
+  display: flex;
+  flex-direction: row;
+}
+.col-view {
+  display: flex;
+  flex-direction: column;
+}
+.text-hidden {
+  overflow:hidden;  
+  text-overflow:ellipsis;  
+  white-space:nowrap;
+}
+::-webkit-scrollbar {  
+  width: 0;  
+  height: 0;  
+  color: transparent;  
+}  
