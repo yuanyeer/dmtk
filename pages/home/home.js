@@ -50,6 +50,12 @@ Page({
       url: '../courses/courses',
     })
   },
+  // 课程点击
+  courseClickEvent:function() {
+    wx.navigateTo({
+      url: '../courses/course_detail',
+    })
+  },
   // 扫码
   scanClickEvent:function() {
     wx.navigateTo({

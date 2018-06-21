@@ -43,6 +43,7 @@
     contentPadding='{{contentPadding}}'
     contentItemW='{{contentItemW}}'
     recArr='{{recArr}}'
+    bind:courseClickEvent="courseClickEvent"
   >
 
   </courseList>

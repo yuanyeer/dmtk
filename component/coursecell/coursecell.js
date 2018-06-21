@@ -35,7 +35,7 @@ Component({
   methods: {
     // 课程点击
     _cellClickEvent:function(e) {
-      console.log(e)
+      this.triggerEvent("courseClickEvent", { text: e })
     } 
   }
 })
