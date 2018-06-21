@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "大麦天空",
+  "usingComponents":{
+    "searchbar":"/component/searchbar/searchbar"
+  }
+}

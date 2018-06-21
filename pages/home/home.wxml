@@ -1,3 +1,13 @@
+<!-- 扫码 -->
+<view class='scan-view' bindtap='scanClickEvent'>
+
+</view>
+
+<!--定位  -->
+<view class='location-view' bindtap='locationClickEvent'>
+
+</view>
+
 <!--顶部导航  -->
 <view class='top' style="height:{{swiperHeight}}px">
   <swiper indicator-dots="true" autoplay="false" duration="250" style="height:{{swiperHeight}}px">
@@ -14,7 +24,7 @@
 <!--功能按钮  -->
 <view class='fun row-view'>
   <view wx:for='{{functionArr}}' wx:key="id">
-    <view class='fun-item'>
+    <view class='fun-item' bindtap='functionBtnClickEvent'>
       <view class='fun-item-icon' style='background-color:{{item.color}}'></view>
       <label>{{item.title}}</label>
     </view>
@@ -27,19 +37,15 @@
     <view class='rec-top-item left'>推荐课程</view>
     <view class='rec-top-item right'>更多></view>
   </view>
-  <view class='rec-content row-view boxsize' style='padding:0px {{contentPadding}}px 0px;'>
-    <view wx:for="{{recArr}}" wx:key="id">
-      <view class='rec-content-item col-view' style="background-color:{{item.color}};width:{{contentItemW}}px;">
-        <image src='{{item.url}}'></image>
-        <label> {{item.title}}</label>
-        <view class='rec-class-bottom row-view'>
-          <label class='price'>￥{{item.price}}</label>
-          <label class='counts'>共{{item.count}}课时</label>
-        </view>
-      </view>
 
-    </view>
-  </view>
+  <!--课程列表  -->
+  <courseList
+    contentPadding='{{contentPadding}}'
+    contentItemW='{{contentItemW}}'
+    recArr='{{recArr}}'
+  >
+
+  </courseList>
 
   <view class='rec-loadmore row-view'>
     换一批O

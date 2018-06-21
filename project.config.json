@@ -30,13 +30,48 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
 					"name": "order",
 					"pathName": "pages/order/order",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "城市定位",
+					"pathName": "pages/location/location",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索结果",
+					"pathName": "pages/search_resutl/search_result",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "扫码",
+					"pathName": "pages/scan/scan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课程分类",
+					"pathName": "pages/courses/courses",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课程详细",
+					"pathName": "pages/courses/course_detail"
 				}
 			]
 		}

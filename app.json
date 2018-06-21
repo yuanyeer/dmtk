@@ -4,7 +4,12 @@
     "pages/my/my",
     "pages/order/order",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/location/location",
+    "pages/search_resutl/search_result",
+    "pages/scan/scan",
+    "pages/courses/courses",
+    "pages/courses/course_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,5 +42,4 @@
       }
     ]
   }
-  
 }

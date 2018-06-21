@@ -1,0 +1,4 @@
+<!--搜索框  -->
+<view class="search-bar" style='margin-top:{{marginTop}}px;margin-bottom: {{marginBottom}}px;' >
+  <input id='input-bar' placeholder='请输入城市' bindinput='_inputEvent'></input>
+</view>

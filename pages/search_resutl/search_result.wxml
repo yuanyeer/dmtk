@@ -1,0 +1,11 @@
+<searchbar class="top" bind:searchInputCallback="searchInputCallback"
+  marginBottom="10">
+
+</searchbar>
+<courseList
+ contentPadding='{{contentPadding}}'
+ contentItemW='{{contentItemW}}'
+ recArr='{{recArr}}'
+ 
+>
+</courseList>

@@ -34,6 +34,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    proUrl:"",//正式环境URL
+    debugUrl:"",//调试环境URL
+    
   }
 })

@@ -1,28 +1,15 @@
-// pages/Home/home.js
-
+// pages/courses/courses.js
 const util = require('../../utils/appTool.js')
-
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    itemArr: [{ color: "Red" }, { color: "Gray" }, { color: "Green" }, { color: "Blue" }],
-    swiperHeight:175,
-    functionArr: [{ title: "益智游戏", color: "Red" }, { title: "儿童英语", color: "Blue" }, { title: "才艺学习", color: "Green" }, { title: "婴儿早教", color: "Brown" }],
+    topArr: [{ id: 0, title: "年龄段", select: "" }, { id: 1, title: "课时", select: "" }, { id: 2, title: "价格", select: "" }],
     recArr: [{ url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }],
-    contentPadding:15,
-    contentItemW:0,
-    hot:{
-      url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title:"益智手绘游戏，提升孩子美感认知和绘画能力",
-      price:1185,
-      comments:185,
-      stars:4.5
-    },
-    botImageW: 0
+    contentPadding: 15,
+    contentItemW: 0
   },
 
   /**
@@ -30,36 +17,24 @@ Page({
    */
   onLoad: function (options) {
     var screenW = util.getScrW();
-    var contentItemW = (screenW - this.data.contentPadding * 3)*0.5;
+    var contentItemW = (screenW - this.data.contentPadding * 3) * 0.5;
     this.setData({
       contentItemW: contentItemW
     })
-    console.log(this.data.contentItemW)
-
-
-    //底部图片宽度
-    var botImageW = (screenW - this.data.contentPadding * 2);
+  },
+  topItemClickEvent:function(e) {
+    var selectId = e.target.dataset.itemid
+    var arr = this.data.topArr;
+    for(var index in arr) {
+      var item = arr[index]
+      if (item.id == selectId) {
+        item['select'] = "selected"
+      }else {
+        item['select'] = ""
+      }
+    }
     this.setData({
-      botImageW: botImageW
-    })
-    console.log(this.data.botImageW);
-  },
-  // 中间功能按钮点击
-  functionBtnClickEvent:function(e) {
-    wx.navigateTo({
-      url: '../courses/courses',
-    })
-  },
-  // 扫码
-  scanClickEvent:function() {
-    wx.navigateTo({
-      url: '../scan/scan',
-    })
-  },
-  // 定位点击
-  locationClickEvent:function() {
-    wx.navigateTo({
-      url: '../location/location',
+      topArr: arr
     })
   },
   /**

@@ -1,0 +1,22 @@
+/* pages/courses/courses.wxss */
+@import '../../css/global-css/base.wxss';
+
+.top {
+  background-color: lightcyan;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  position:fixed;
+  top: 0;
+  left: 0;
+}
+
+.top-item{
+  height: 100%;
+  width: 33.333%;
+  font-size: 15px; 
+}
+.selected {
+  border-bottom: 1px solid lightcoral;
+  color: lightcoral;
+}

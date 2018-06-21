@@ -1,0 +1,9 @@
+
+<!--顶部搜索框  -->
+<searchbar bind:searchInputCallback="searchInputCallback"></searchbar>
+
+<!--热门城市  -->
+<view class='hot-city'></view>
+
+<!--城市列表  -->
+<view class='city-list'></view>

@@ -1,0 +1,13 @@
+ <!--课程列表 一行两个  -->
+ <view class='rec-content row-view boxsize' style='padding:0px {{contentPadding}}px 0px;margin-top:{{marginTop}}px'>
+    <view wx:for="{{recArr}}" wx:key="id">
+      <view class='rec-content-item col-view' style="background-color:{{item.color}};width:{{contentItemW}}px;" bindtap='_cellClickEvent' data-id="{{item.id}}">
+        <image src='{{item.url}}'></image>
+        <label> {{item.title}}</label>
+        <view class='rec-class-bottom row-view'>
+          <label class='price'>￥{{item.price}}</label>
+          <label class='counts'>共{{item.count}}课时</label>
+        </view>
+      </view>
+    </view>
+  </view>

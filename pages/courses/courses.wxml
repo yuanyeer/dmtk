@@ -1,0 +1,13 @@
+<view class="top row-view">
+    <view class='top-item tac {{item.select}}' wx:for="{{topArr}}" wx:key="id"
+      bindtap='topItemClickEvent' 
+      data-itemId="{{item.id}}"
+    >{{item.title}}</view>
+</view>
+
+<courseList
+  contentPadding='{{contentPadding}}'
+  contentItemW='{{contentItemW}}'
+  recArr='{{recArr}}'
+  marginTop="60"
+></courseList>

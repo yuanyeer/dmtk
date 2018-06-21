@@ -1,0 +1,14 @@
+<!--顶部导航  -->
+<view class='top' style="height:{{swiperHeight}}px">
+  <swiper indicator-dots="true" autoplay="false" duration="250" style="height:{{swiperHeight}}px">
+    <!--swiper-item只能包含一个节点再多会自动删除-->
+    <view wx:for='{{itemArr}}' wx:key="id">
+      <swiper-item>
+        <view style=" height:{{swiperHeight}}px;background-color:{{item.color}}">
+        </view>
+      </swiper-item>
+    </view>
+  </swiper>
+</view>
+
+<view class='course-detail-view'></view>
