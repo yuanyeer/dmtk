@@ -1,6 +1,6 @@
 /* pages/courses/course_detail.wxss */
 @import '../../css/global-css/base.wxss';
 .course-detail-view {
-  height: 150px;
+  height: 300rpx;
   background-color: #abc;
 }

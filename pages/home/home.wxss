@@ -5,30 +5,30 @@ page {
 }
 .scan-view {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 50px;
-  height: 50px;
+  top: 20rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
   background-color: yellow;
   z-index: 2;
 }
 .location-view {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 50px;
-  height: 50px;
+  top: 20rpx;
+  left: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
   background-color:khaki;
   z-index: 2;
 }
 .scroll-item {
     width: 100%;
-      height: 250px;
+      height: 500rpx;
         display: inline-block;
 }
 .scroll-item {
   width: 100%;
-  height: 250px;
+  height: 500rpx;
   display: inline-block;
 }
 .top {
@@ -36,27 +36,27 @@ page {
   background-color:#cdc;
 }
 .fun {
-  height: 80px;
+  height: 160rpx;
   width:100%;
   background-color:#fdf;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 2rpx solid gainsboro;
 }
 .fun-item {
-  width: 80px;
-  height: 80px;
+  width: 160rpx;
+  height: 160rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .fun-item label {
-  font-size: 13px;
+  font-size: 26rpx;
 }
 .fun-item-icon {
-  width: 50px;
-  height: 50px;
+  width: 100rpx;
+  height: 100rpx;
   background-color: #caf;
 }
 
@@ -68,11 +68,11 @@ page {
 }
 .rec-top {
   width: 100%;
-  height: 50px;
+  height: 100rpx;
   position:relative;
 }
 .rec-top .rec-top-item {
-  width: 100px;
+  width: 200rpx;
   height: 100%;
 }
 .rec-top-item.left {
@@ -86,16 +86,16 @@ page {
   align-items: center;
   display: flex;
   color: #ccc;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 .rec-loadmore {
   width: 100%;
-  height: 40px;
-  border-top: 1px solid gainsboro;
+  height: 80rpx;
+  border-top: 1rpx solid gainsboro;
   justify-content: center;
   align-items: center;
   color: green;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 
 
@@ -103,26 +103,26 @@ page {
 .hot {
   background-color: #fff;
   width:100%;
-  margin-top: 10px;
-  border-bottom: 1px solid #ccc;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #ccc;
 }
 .hot-content image {
-  height: 175px;
-  border-radius: 5px;
+  height: 350rpx;
+  border-radius: 10rpx;
 }
 .hot-label-view {
-  margin-top: 8px;
+  margin-top: 16rpx;
   justify-content: space-between;
 }
 .hot-title {
-  font-size: 15px;
+  font-size: 30rpx;
   width: 80%;
 }
 .hot-price {
-  font-size: 16px;
+  font-size: 32rpx;
   color:orange;
 }
 .hot-bottom label{
-  font-size: 14px;
+  font-size: 28rpx;
   color: gray;
 }

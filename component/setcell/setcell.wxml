@@ -1,0 +1,8 @@
+<view class='cell-content'>
+  <view class='set-cell' wx:for="{{dataArr}}" wx:key="id" bindtap='_celltapEvent' data-link="{{item.link}}" style="height:{{cellHeight}}px">
+      <image src='{{item.icon}}'></image>
+      <label>{{item.title}}</label>
+      <label class='subTitle'>{{item.subTitle}}</label>
+      <image class='arrow' src='../../images/arrow.png'></image>
+  </view>
+</view>

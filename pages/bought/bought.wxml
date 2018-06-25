@@ -1,0 +1,17 @@
+<view class='cell-cotent'>
+
+  <view class='cell boxsize col-view' wx:for="{{dataArr}}" wx:key="id">
+    <view class='cell-top row-view'>
+      <image src='{{item.imgUrl}}'></image>
+      <view class='content col-view'>
+        <label class='title' maxlength="100" >{{item.title}}</label>
+        <label class='sub-title'>{{item.subTitle}}</label>
+      </view>
+    </view>
+    <view class='cell-bot'>
+      <label class='date'>{{item.date}}</label>
+    </view>
+
+  </view>
+
+</view>

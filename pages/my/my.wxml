@@ -1,2 +1,11 @@
-<!--pages/My/my.wxml-->
-<text>pages/My/my.wxml</text>
+<view class="top tac">
+  <view class='user-icon'></view>
+  <view class='notification' bindtap='newClickEvent'></view>
+</view>
+<view class='ad' bindtap='vipItemClickEvent'>
+  VIP
+</view>
+
+<setcell dataArr="{{dataArr}}" cellHeight="56"
+  bind:setCellClickEvent="setCellClickEvent"
+></setcell>

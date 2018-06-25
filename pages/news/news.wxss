@@ -1,0 +1,43 @@
+@import '../../css/global-css/base.wxss';
+
+page {
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.new-cell {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.top-date {
+  width: 260rpx;
+  height: 80rpx;
+  background-color: #ADD8E6;
+  border-radius: 40rpx;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+.cell-content {
+  background-color: #ADD8E6;
+  padding: 20rpx 40rpx 30rpx;
+  margin: 0px 20rpx;
+}
+.cell-content .title{
+  font-size: 32rpx;
+}
+.cell-content text {
+  margin: 20rpx 0px 20rpx;
+  display: -webkit-box;
+    font-size:28rpx;
+    color:#000000;
+    line-height: 40rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.cell-content image {
+  width: 100%;
+  height: 300rpx;
+}

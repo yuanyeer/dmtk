@@ -1,0 +1,41 @@
+<!--顶部  -->
+<view class="top">
+  <view class='user-icon'></view>
+  <view class='text-view col-view'>
+    <label class='name'>Jonhax</label>
+    <label class='subTitle'>ni hoa sniaaassk</label>
+  </view>
+</view>
+
+
+<!--内容  -->
+<view class='mid-view boxsize'>
+  <image class='mid-img' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529920666674&di=d0a2d1f3e35d084074a770c8add239ec&imgtype=0&src=http%3A%2F%2Fpx.thea.cn%2FPublic%2FUpload%2F1520434%2FIntro%2F1437382587.png"></image>
+  <!--价钱  -->
+  <view class='price-view'>
+    <label>￥465465.52</label>
+    <label class='dis'>十一组团优惠</label>
+  </view>
+
+
+  <!--特权  -->
+  <view class='detail col-view'>
+    <label class='title'>VIP特权说明</label>
+    <text class='text'>1.珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。
+
+    2.珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。
+
+    3.珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。
+
+    4.珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。
+
+    5.珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。珍惜生命，请勿看世界杯。</text>
+  </view>
+
+</view>
+
+<!--底部支付  -->
+<view class='bot-pay'>
+  <label class='price-label'>总价 : ￥46000</label>
+  <button class='pay-btn tac'>确认支付</button>
+</view>

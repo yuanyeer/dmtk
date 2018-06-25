@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "大麦天空",
+  "usingComponents": {
+    "setcell": "/component/setcell/setcell"
+  }
+}
