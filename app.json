@@ -12,7 +12,9 @@
     "pages/news/news",
     "pages/collection/collection",
     "pages/vip/vip",
-    "pages/bought/bought"
+    "pages/bought/bought",
+    "pages/login/bind",
+    "pages/order/order_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

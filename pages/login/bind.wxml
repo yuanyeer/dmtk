@@ -1,0 +1,8 @@
+<input placeholder="请输入手机号码" class='phone-input' confirm-type="确定" focus='true'
+  bindinput="textinputEvent"
+  bindconfirm="textinputConfirmEvent"
+></input>
+
+
+
+<button class='confirm-btn'>绑定</button>

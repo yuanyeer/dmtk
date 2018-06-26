@@ -103,6 +103,18 @@
 					"name": "已购",
 					"pathName": "pages/bought/bought",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "绑定手机号",
+					"pathName": "pages/login/bind",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单详情",
+					"pathName": "pages/order/order_detail",
+					"query": ""
 				}
 			]
 		}

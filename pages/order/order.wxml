@@ -5,7 +5,7 @@
 </view>
 <view class='content col-view '>
   <view wx:for="{{orderArr}}" wx:key="id">
-    <view class='order-item boxsize'>
+    <view class='order-item boxsize' bindtap='orderClickEvent'>
       <view class='order-top col-view boxsize'>{{item.top}}</view>
       <view class='order-content row-view'>
         <image src="{{item.url}}"></image>

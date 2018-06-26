@@ -1,0 +1,92 @@
+@import '../../css/global-css/base.wxss';
+.top {
+  height: 400rpx;
+  background-color: #abc;
+  position: relative;
+}
+.shared {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: aqua;
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+.mid {
+  padding: 0rpx 20rpx 0rpx;
+  position: relative;
+  border-bottom: 2rpx solid #000;
+}
+
+/*mid  */
+.title-view {
+  margin-top: 20rpx;
+  position: relative;
+}
+.title-view .title{
+  display: inline-block;
+  width: 80%;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+.title-view .count {
+  font-size: 28rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.price {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+}
+.progress {
+  border-radius: 20rpx;
+  overflow: hidden;
+  width: 100%;
+  height: 120rpx;
+  background-color: #abc;
+  margin-top: 30rpx;
+}
+.successed {
+  height: 100%;
+  width: 30%;
+  background-color: green;
+}
+.bind-view {
+  margin-top: 40rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.bind-title {
+  font-size: 28rpx;
+}
+.bind {
+  float: right;
+  font-size: 28rpx;
+}
+
+/*intro  */
+.intro {
+  margin-bottom: 100rpx;
+  padding: 30rpx 20rpx 30rpx;
+}
+.intro-title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.intro text {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+}
+.scan-btn {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background-color: orange;
+  color: white;
+  outline: none;
+  border-radius: 0rpx;
+  width: 100%;
+  height: 100rpx;
+}
