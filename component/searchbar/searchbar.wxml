@@ -1,4 +1,4 @@
 <!--搜索框  -->
-<view class="search-bar" style='margin-top:{{marginTop}}px;margin-bottom: {{marginBottom}}px;' >
-  <input id='input-bar' placeholder='请输入城市' bindinput='_inputEvent'></input>
+<view class="search-bar" style='margin-top:{{marginTop}}px;margin-bottom: {{marginBottom}}px;padding-left:{{paddingLeft}}px;padding-right:{{paddingRight}}px;' >
+  <input id='input-bar' placeholder='请输入城市' bindinput='_inputEvent' confirm-type="确定"></input>
 </view>

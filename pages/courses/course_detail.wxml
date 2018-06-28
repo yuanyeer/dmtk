@@ -11,4 +11,26 @@
   </swiper>
 </view>
 
-<view class='course-detail-view'></view>
+<!--课程标题 价钱  -->
+<view class='course-info-view row-view boxsize'>
+  <view class='title-view'>
+    标题标题标题标题标题标题标题标题
+  </view>
+  <view class='course-price col-view'>
+    <label class='price'>￥1234.5</label>
+    <label class='count'>共4个课时</label>
+  </view>
+</view>
+
+<!--使用门店  -->
+<view class='course-tabBar row-view'>
+  <view class='tac tabBar-selected'>使用门店</view>
+  <view class='tac'>课程介绍</view>
+</view>
+
+
+<!--购买栏  -->
+<view class='bot-bar row-view'>
+  <label>价格:￥123456</label>
+  <button>立即购买</button>
+</view>

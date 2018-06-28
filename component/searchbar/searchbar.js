@@ -11,6 +11,14 @@ Component({
     marginTop: {
       type:String,
       value:"0"
+    },
+    paddingRight:{
+      type:String,
+      value:""
+    },
+    paddingLeft:{
+      type:String,
+      value:""
     }
 
   },

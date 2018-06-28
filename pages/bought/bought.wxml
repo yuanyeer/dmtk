@@ -4,14 +4,18 @@
     <view class='cell-top row-view'>
       <image src='{{item.imgUrl}}'></image>
       <view class='content col-view'>
-        <label class='title' maxlength="100" >{{item.title}}</label>
+        <label class='title' >{{item.title}}</label>
+        <label class='statu' wx:if="{{item.statu == 0}}">
+          未开启
+        </label>
+        <label class='statu' wx:if="{{item.statu == 2}}">
+          完结
+        </label>
         <label class='sub-title'>{{item.subTitle}}</label>
       </view>
     </view>
     <view class='cell-bot'>
       <label class='date'>{{item.date}}</label>
     </view>
-
   </view>
-
 </view>

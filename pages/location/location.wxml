@@ -1,9 +1,23 @@
-
 <!--顶部搜索框  -->
-<searchbar bind:searchInputCallback="searchInputCallback"></searchbar>
+<searchbar bind:searchInputCallback="searchInputCallback" paddingRight="{{cityPadding}}" paddingLeft="{{cityPadding}}"></searchbar>
 
 <!--热门城市  -->
-<view class='hot-city'></view>
+<label class='hot-title' style="margin-left:{{cityPadding}}px;">热门城市</label>
+
+<view class='hot-city row-view'>
+  <view class='city-item tac' style="width:{{cityItemW}}px;margin-left:{{cityPadding}}px;" wx:for="{{hotCity}}" wx:key="id">
+    {{item.name}}</view>
+</view>
 
 <!--城市列表  -->
-<view class='city-list'></view>
+<label class='all-city-title' style="margin-left:{{cityPadding}}px;">所有城市</label>
+<view class='city-list col-view' style="padding:0 {{cityPadding}}px 0">
+  <scroll-view scroll-y scroll-into-view="{{toView}}" style="height:{{cityListHeight}}px;">
+    <view style="height:{{cityItemHeight}}px" id="{{item.idx}}" class="city-item" wx:for="{{city}}" wx:key="id">{{item.displayName}}</view>
+  </scroll-view>
+</view>
+
+<!--索引  -->
+<view class='indexes col-view' style="width:{{cityPadding}}px">
+  <view class='index-item tac' wx:for="{{indexArr}}" wx:key="id" bindtap='indexsClickEvent' data-indexData="{{item}}">{{item}}</view>
+</view>

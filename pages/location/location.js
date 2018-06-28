@@ -1,11 +1,21 @@
 // pages/location/location.js
+const util = require('../../utils/appTool.js')
+const city = require('../../utils/allcity.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    cityPadding:20,
+    cityItemW:0,
+    hotArr: [{ title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }],
+    indexArr:[],
+    city:[],
+    hotCity:[],
+    toView:"",
+    cityItemHeight:50,
+    cityListHeight:0
   },
   searchInputCallback:function(e) {
     console.log(e.detail.text)
@@ -14,7 +24,65 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var screenW = util.getScrW();
+    console.log(screenW)
+    var cityItemW = (screenW - this.data.cityPadding * 4) / 3;
+    this.setData({
+      cityItemW: cityItemW
+    })
+    
+
+    var indexArr = [];
+    var cityArr = city.getAllCity();
+    var hotCity = city.getHotCity();
   
+    var allCity = []
+    for(var group_idx in cityArr) {
+      var group = cityArr[group_idx]
+      indexArr.push(group.idt)
+      for(var city_idx in group.cites) {
+        var cityItem = group.cites[city_idx]
+        var obj = {}
+        obj.key = cityItem.key
+        obj.name = cityItem.name
+        obj.idx = cityItem.key + "_" + city_idx
+        
+        if (city_idx == 0) {
+          obj.displayName = cityItem.key
+        }else {
+          obj.displayName = cityItem.name
+        }
+        allCity.push(obj)
+      }
+    }
+
+    var cityListHeight = util.getScrH()
+
+    this.setData({
+      indexArr: indexArr,
+      city: allCity,
+      hotCity: hotCity,
+      cityListHeight: cityListHeight
+    })
+
+  },
+  // 索引点击
+  indexsClickEvent:function(e) {
+    
+    var toView = e.currentTarget.dataset.indexdata+"_0"
+    console.log(toView)
+    this.setData({
+      toView: toView
+    })
+  },
+  isInArray:function(str,arr) {
+    for(var index in arr) {
+      var item = arr[index]
+      if(item == str) {
+        return true;
+      }
+    }
+    return false;
   },
 
   /**

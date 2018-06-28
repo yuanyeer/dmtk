@@ -1,2 +1,69 @@
 @import '../../css/global-css/base.wxss';
+page {
+  box-sizing: border-box;
+}
+.hot-city {
+  /* padding: 0 30rpx 0; */
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+}
+.hot-title {
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 60rpx;
+  font-size: 17pt;
+  color: #353535;
+}
+.hot-city .city-item {
+  height: 90rpx;
+  margin-bottom: 30rpx;
+  background-color: #F0F0F0;
+  /* font-size: 30rpx; */
+  font-size: 13pt;
+  color: #353535;
+}
+.all-city-title {
+  display: inline-block;
+   font-weight: 700;
+   margin-top: 60rpx;
+   font-size: 17pt;
+   color: #353535;
+}
+
+/*城市列表  */
+.city-list {
+  margin-top: 30rpx;
+}
+.city-list view {
+  /* font-size: 30rpx; */
+  font-size: 13pt;
+  color: #353535;
+}
+.city-group {
+
+}
+.city-item {
+  justify-content: center;
+  /* height: 100rpx; */
+}
+/* .city-group .city-item:nth-child(odd) {
+  background-color: #abc;
+}
+.city-group .city-item:nth-child(even) {
+  background-color: lawngreen;
+} */
+
+/*索引  */
+.indexes {
+  position: fixed;
+  top: 100rpx;
+  right: 0;
+  font-size: 22rpx;
+  /* background-color: gold; */
+}
+.indexes view {
+  /* background-color: #abc; */
+  margin-top: 16rpx;
+  color: #353535;
+}
 

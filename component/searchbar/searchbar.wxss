@@ -1,16 +1,15 @@
 .search-bar {
-  background-color: lightcyan;
-  height: 120rpx;
+  height: 100rpx;
   align-items: center;
   justify-content: center;
   display: flex;
-  
+  box-sizing: border-box;
 }
 .search-bar input {
-  width: 80%;
+  width: 100%;
   height: 80%;
-  background-color: #abc;
-  border-radius: 16rpx;
-  padding-left: 20rpx;
-  font-size: 32rpx;
+  background-color: #F0F0F0;
+  border-radius: 50rpx;
+  padding-left: 30rpx;
+  font-size: 28rpx;
 }
