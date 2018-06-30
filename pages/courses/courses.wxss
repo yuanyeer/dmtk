@@ -2,10 +2,9 @@
 @import '../../css/global-css/base.wxss';
 
 .top {
-  background-color: lightcyan;
+  background-color: #F8F8F8;
   width: 100%;
   height: 100rpx;
-  margin-bottom: 40rpx;
   position:fixed;
   top: 0;
   left: 0;
@@ -17,6 +16,5 @@
   font-size: 30rpx; 
 }
 .selected {
-  border-bottom: 2rpx solid lightcoral;
-  color: lightcoral;
+  color: #80B08A;
 }

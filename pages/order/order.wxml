@@ -1,8 +1,7 @@
 <view class="top row-view">
-  <view class='top-item col-view {{useBtnClass}}' bindtap='useBtnClick'>可使用</view>
-  <view class='top-item col-view {{unabelBtnClass}}' bindtap='unableBtnClick'>已失效</view>
-
+  <view class="top-item col-view {{item.isSel == true ? 'use':''}}" bindtap='orderCatClickEvent' wx:for="{{topArr}}" data-idx="{{item.tag}}" wx:key="id">{{item.title}}</view>
 </view>
+
 <view class='content col-view '>
   <view wx:for="{{orderArr}}" wx:key="id">
     <view class='order-item boxsize' bindtap='orderClickEvent'>

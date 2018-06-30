@@ -34,25 +34,73 @@ page {
 .top {
   width:100%;
   background-color:#cdc;
+  position: relative;
 }
+/*轮播点点  */
+.swiper-dots-view {
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  height: 30rpx;
+  width: 100%;
+  z-index: 30;
+  justify-content: center;
+}
+.swiper-dots {
+  width: 16rpx;
+  height: 16rpx;
+  margin-right: 15rpx;
+  background-color: lightgray;
+  border-radius: 8rpx;
+  opacity: 0.5;
+}
+.active {
+  background-color: #fff;
+  width: 40rpx;
+  opacity: 1;
+}
+
+/*中间栏目  */
 .fun {
-  height: 160rpx;
   width:100%;
-  background-color:#fdf;
+  background-color:#fff;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
   border-bottom: 2rpx solid gainsboro;
+  position: relative;
+}
+
+/*搜索栏  */
+.mid-search-bar {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50rpx;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0rpx 35rpx 100rpx #F0F0F0;
+  color: #999999;
+  padding-left: 48rpx;
+  padding-top: 48rpx;
+  padding-bottom: 48rpx;
+  font-size: 30rpx;
+}
+/*中间功能按键  */
+.fun-container {
+  margin-top: 120rpx;
 }
 .fun-item {
   width: 160rpx;
   height: 160rpx;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin-bottom: 24rpx;
 }
 .fun-item label {
   font-size: 26rpx;
+  color: #333333;
 }
 .fun-item-icon {
   width: 100rpx;
@@ -68,25 +116,21 @@ page {
 }
 .rec-top {
   width: 100%;
-  height: 100rpx;
   position:relative;
-}
-.rec-top .rec-top-item {
-  width: 200rpx;
-  height: 100%;
-}
-.rec-top-item.left {
-  justify-content:flex-start;
-  align-items: center;
+  justify-content: space-between;
+  align-items: center; 
   display: flex;
+  height: 100rpx;
+}
+.rec-title {
   font-weight: 700;
+  color: #333333;
+  font-size: 32rpx;
 }
-.rec-top-item.right {
-  justify-content: flex-end;
-  align-items: center;
-  display: flex;
-  color: #ccc;
-  font-size: 28rpx;
+.rec-more {
+  float: right;
+  color: #999999;
+  font-size: 24rpx;
 }
 .rec-loadmore {
   width: 100%;

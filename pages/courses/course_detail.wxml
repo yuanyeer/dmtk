@@ -28,9 +28,12 @@
   <view class='tac'>课程介绍</view>
 </view>
 
+<!--内容列表  -->
+<view class='table-list'></view>
+
 
 <!--购买栏  -->
 <view class='bot-bar row-view'>
   <label>价格:￥123456</label>
-  <button>立即购买</button>
+  <button class='tac'>立即购买</button>
 </view>

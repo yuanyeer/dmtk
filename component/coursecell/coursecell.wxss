@@ -17,23 +17,47 @@
   border-radius: 20rpx;
 }
 
-.rec-content-item label {
-  margin-top: 8rpx;
-  font-size: 28rpx;
-  color: #050505;
-}  
+/*标题  */
+.title-view {
+  margin-top: 16rpx;
+  height: 100rpx;
+  widows: 100%;
+  position: relative;
+}
+.tag{
+  font-size: 18rpx;
+  position: absolute;
+  top:5rpx;
+  left: 0rpx;
+  display: inline-block;
+  border: 2rpx solid #80B08A;
+  color: #80B08A;
+  padding: 4rpx 6rpx 4rpx; 
+  border-radius: 8rpx;
+}
+.title {
+  font-weight: 500;
+  font-size: 30rpx;
+  display: inline-block;
+  line-height: 44rpx;
+  color: #000;
+}
+.hadTag {
+  text-indent: 3.4em;
+}
 
 .rec-class-bottom {
   width: 100%;
   height: 56rpx;
   /* background-color: #ffeacc; */
   justify-content: space-between;
+  align-items: center;
 }
 .rec-class-bottom label.price {
   color: orange;
 }
 .rec-class-bottom label.counts {
-  color: #ccc;
+  color: gray;
   font-size: 24rpx;
 }
 

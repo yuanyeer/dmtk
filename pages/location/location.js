@@ -7,9 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cityPadding:20,
+    cityPadding:15,
     cityItemW:0,
-    hotArr: [{ title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }, { title: "上海" }],
     indexArr:[],
     city:[],
     hotCity:[],
@@ -26,7 +25,7 @@ Page({
   onLoad: function (options) {
     var screenW = util.getScrW();
     console.log(screenW)
-    var cityItemW = (screenW - this.data.cityPadding * 4) / 3;
+    var cityItemW = (screenW - this.data.cityPadding * 6) / 3;
     this.setData({
       cityItemW: cityItemW
     })
@@ -46,9 +45,10 @@ Page({
         obj.key = cityItem.key
         obj.name = cityItem.name
         obj.idx = cityItem.key + "_" + city_idx
-        
+        obj.start = false;
         if (city_idx == 0) {
           obj.displayName = cityItem.key
+          obj.start = true;
         }else {
           obj.displayName = cityItem.name
         }

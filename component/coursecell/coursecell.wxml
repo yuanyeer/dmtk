@@ -3,10 +3,16 @@
     <view wx:for="{{recArr}}" wx:key="id">
       <view class='rec-content-item col-view' style="background-color:{{item.color}};width:{{contentItemW}}px;" bindtap='_cellClickEvent' data-id="{{item.id}}">
         <image src='{{item.url}}'></image>
-        <label> {{item.title}}</label>
+        
+        <view class='title-view row-view'>
+          <label class='tag' wx:if="{{item.tag != null && item.tag.length > 0}}">{{item.tag}}</label>
+
+          <label class="title hadTag" style="text-indent:{{item.tag.length / emData + 0.3}}em;" wx:if="{{item.tag != null && item.tag.length > 0}}"> {{item.title}}</label>
+           <label class="title" wx:else> {{item.title}}</label>
+        </view>
         <view class='rec-class-bottom row-view'>
           <label class='price'>￥{{item.price}}</label>
-          <label class='counts'>共{{item.count}}课时</label>
+          <label class='counts'>共{{item.count}}学时</label>
         </view>
       </view>
     </view>

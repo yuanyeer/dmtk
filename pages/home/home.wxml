@@ -8,9 +8,9 @@
 
 </view>
 
-<!--顶部导航  -->
+<!--顶部轮播  -->
 <view class='top' style="height:{{swiperHeight}}px">
-  <swiper indicator-dots="true" autoplay="false" duration="250" style="height:{{swiperHeight}}px">
+  <swiper current='{{swiperCurrent}}' autoplay="false" duration="250" style="height:{{swiperHeight}}px" bindchange='onSlideChangeEnd'>
     <!--swiper-item只能包含一个节点再多会自动删除-->
     <view wx:for='{{itemArr}}' wx:key="id">
       <swiper-item>
@@ -19,32 +19,39 @@
       </swiper-item>
     </view>
   </swiper>
+
+  <!--小点  -->
+  <view class='swiper-dots-view row-view'>
+    <view class="swiper-dots {{swiperCurrent == index ?  'active' : ''}}" wx:for="{{itemArr}}" wx:key="id"></view>
+  </view>
 </view>
 
 <!--功能按钮  -->
 <view class='fun row-view'>
-  <view wx:for='{{functionArr}}' wx:key="id">
-    <view class='fun-item' bindtap='functionBtnClickEvent'>
-      <view class='fun-item-icon' style='background-color:{{item.color}}'></view>
-      <label>{{item.title}}</label>
-    </view>
+  <!--搜索栏  -->
+  <view class='mid-search-bar boxsize' style="width:{{searchBarWidth}}px;height:{{searchBarHeight}}px;top:-{{searchBarHeight * 0.5}}px">
+    您想学习什么知识
   </view>
+
+
+    <view wx:for='{{functionArr}}' wx:key="id" class='fun-container'>
+      <view class='fun-item' bindtap='functionBtnClickEvent'>
+        <view class='fun-item-icon' style='background-color:{{item.color}}'></view>
+        <label>{{item.title}}</label>
+      </view>
+    </view>
+
 </view>
 
 <!--推荐课程  -->
-<view class='recommend' >
-  <view class='rec-top boxsize' style='padding:0px {{contentPadding}}px 0px;'>
-    <view class='rec-top-item left'>推荐课程</view>
-    <view class='rec-top-item right'>更多></view>
+<view class='recommend'>
+  <view class='rec-top boxsize' style='padding:0rpx {{contentPadding}}px 0rpx;'>
+    <label class='rec-title'>推荐课程</label>
+    <label class='rec-more'>更多></label>
   </view>
 
   <!--课程列表  -->
-  <courseList
-    contentPadding='{{contentPadding}}'
-    contentItemW='{{contentItemW}}'
-    recArr='{{recArr}}'
-    bind:courseClickEvent="courseClickEvent"
-  >
+  <courseList contentPadding='{{contentPadding}}' contentItemW='{{contentItemW}}' recArr='{{recArr}}' bind:courseClickEvent="courseClickEvent">
 
   </courseList>
 
@@ -54,22 +61,22 @@
 </view>
 
 <!--热门课程  -->
-<view class='hot boxsize'  style='padding:0px {{contentPadding}}px 0px;'>
+<view class='hot boxsize' style='padding:0px {{contentPadding}}px 0px;'>
   <view class='rec-top '>
     <view class='rec-top-item left'>热门课程</view>
     <view class='rec-top-item right'>更多></view>
   </view>
 
   <view class='hot-content col-view'>
-      <image src='{{hot.url}}' style='width:100%'></image>
-      <view class='hot-label-view row-view'>
-        <label class='hot-title text-hidden'>{{hot.title}}</label>
-        <label class='hot-price'>￥{{hot.price}}</label>
-      </view>
+    <image src='{{hot.url}}' style='width:100%'></image>
+    <view class='hot-label-view row-view'>
+      <label class='hot-title text-hidden'>{{hot.title}}</label>
+      <label class='hot-price'>￥{{hot.price}}</label>
+    </view>
 
-      <view class='hot-bottom'>
-        <label class='hot-stars'>{{hot.stars}}</label>
-        <label class='hot-comment'>{{hot.comments}}</label>
-      </view>
+    <view class='hot-bottom'>
+      <label class='hot-stars'>{{hot.stars}}</label>
+      <label class='hot-comment'>{{hot.comments}}</label>
+    </view>
   </view>
 </view>

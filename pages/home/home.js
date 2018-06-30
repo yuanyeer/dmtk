@@ -10,9 +10,10 @@ Page({
    */
   data: {
     itemArr: [{ color: "Red" }, { color: "Gray" }, { color: "Green" }, { color: "Blue" }],
+    dotsArr:["1","2","3","4"],
     swiperHeight:175,
     functionArr: [{ title: "益智游戏", color: "Red" }, { title: "儿童英语", color: "Blue" }, { title: "才艺学习", color: "Green" }, { title: "婴儿早教", color: "Brown" }],
-    recArr: [{ url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }],
+    recArr: [{ tag: "莫莉幻想", url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { tag: "莫莉幻想", url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { tag: "莫莉幻想", url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { tag: "莫莉幻想", url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { tag: "其他", url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }],
     contentPadding:15,
     contentItemW:0,
     hot:{
@@ -22,7 +23,13 @@ Page({
       comments:185,
       stars:4.5
     },
-    botImageW: 0
+    botImageW: 0,
+    swiperCurrent:0,
+    currentIndex:0,
+
+    //搜索框宽高
+    searchBarWidth:0,
+    searchBarHeight:0,
   },
 
   /**
@@ -43,6 +50,23 @@ Page({
       botImageW: botImageW
     })
     console.log(this.data.botImageW);
+
+
+    //搜索框宽高
+    var searchBarW = screenW * 0.8;
+    var searchBarH = searchBarW * 80 / 600;
+
+    this.setData({
+      searchBarWidth: searchBarW,
+      searchBarHeight: searchBarH
+    })
+  },
+  //轮播图改变
+  onSlideChangeEnd:function(e){
+    var index = e.detail.current;
+    this.setData({
+      swiperCurrent:index
+    })
   },
   // 中间功能按钮点击
   functionBtnClickEvent:function(e) {

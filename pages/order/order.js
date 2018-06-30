@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    topArr:[{title:"可使用",isSel:true,tag:0},{title:"已失效",isSel:false,tag:1}],
     orderArr:[{
       top:"世宇乐园",
       url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
@@ -35,16 +36,19 @@ Page({
       useBtnClass:"use",
       unabelBtnClass: ""
   },
-  unableBtnClick:function(){
+ //顶部分类点击
+  orderCatClickEvent:function(e){
+    var selIdx = e.currentTarget.dataset.idx;
+    var arr = this.data.topArr;
+    for(var index in arr) {
+      var item = arr[index]
+      item.isSel = false;
+      if(item.tag == selIdx) {
+        item.isSel = true;
+      }
+    }
     this.setData({
-      useBtnClass:"",
-      unabelBtnClass:"use"
-    })
-  },
-  useBtnClick:function(){
-    this.setData({
-      useBtnClass: "use",
-      unabelBtnClass: ""
+      topArr: arr
     })
   },
   /**

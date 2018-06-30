@@ -9,5 +9,5 @@
   contentPadding='{{contentPadding}}'
   contentItemW='{{contentItemW}}'
   recArr='{{recArr}}'
-  marginTop="60"
+  marginTop="70"
 ></courseList>

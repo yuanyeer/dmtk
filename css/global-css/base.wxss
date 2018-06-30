@@ -5,6 +5,11 @@
 .left {
   float: left;
 }
+label view text {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
 .right {
   float: right;
 }
@@ -31,3 +36,10 @@
   height: 0;  
   color: transparent;  
 }  
+
+.fg-green {
+  color: #80B08A;
+}
+.bg-green {
+  background-color: #80B08A;
+}
