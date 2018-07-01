@@ -30,6 +30,9 @@ Page({
     //搜索框宽高
     searchBarWidth:0,
     searchBarHeight:0,
+
+    //小点动画
+    dotsAnimation:''
   },
 
   /**
@@ -60,12 +63,21 @@ Page({
       searchBarWidth: searchBarW,
       searchBarHeight: searchBarH
     })
+
+    
   },
   //轮播图改变
   onSlideChangeEnd:function(e){
     var index = e.detail.current;
     this.setData({
       swiperCurrent:index
+    })
+    
+  },
+  //搜索栏点击
+  searchClickEvent:function(e) {
+    wx.navigateTo({
+      url: '../search_resutl/search_result',
     })
   },
   // 中间功能按钮点击

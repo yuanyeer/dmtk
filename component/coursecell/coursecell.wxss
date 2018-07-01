@@ -27,20 +27,20 @@
 .tag{
   font-size: 18rpx;
   position: absolute;
-  top:5rpx;
+  top:0rpx;
   left: 0rpx;
   display: inline-block;
   border: 2rpx solid #80B08A;
-  color: #80B08A;
+  color: #69BE79;
   padding: 4rpx 6rpx 4rpx; 
   border-radius: 8rpx;
 }
 .title {
   font-weight: 500;
-  font-size: 30rpx;
+  font-size: 28rpx;
   display: inline-block;
-  line-height: 44rpx;
-  color: #000;
+  line-height: 40rpx;
+  color: #333333;
 }
 .hadTag {
   text-indent: 3.4em;
@@ -54,11 +54,12 @@
   align-items: center;
 }
 .rec-class-bottom label.price {
-  color: orange;
+  color: #FF9320;
+  font-size: 28rpx;
 }
 .rec-class-bottom label.counts {
-  color: gray;
-  font-size: 24rpx;
+  color: #666666;
+  font-size: 22rpx;
 }
 
 .boxsize {

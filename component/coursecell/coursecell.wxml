@@ -8,7 +8,8 @@
           <label class='tag' wx:if="{{item.tag != null && item.tag.length > 0}}">{{item.tag}}</label>
 
           <label class="title hadTag" style="text-indent:{{item.tag.length / emData + 0.3}}em;" wx:if="{{item.tag != null && item.tag.length > 0}}"> {{item.title}}</label>
-           <label class="title" wx:else> {{item.title}}</label>
+           <label class="title" wx:else> {{item.title}}
+           </label>
         </view>
         <view class='rec-class-bottom row-view'>
           <label class='price'>￥{{item.price}}</label>

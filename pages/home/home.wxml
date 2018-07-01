@@ -1,11 +1,12 @@
 <!-- 扫码 -->
-<view class='scan-view' bindtap='scanClickEvent'>
-
+<view class='scan-view tac' bindtap='scanClickEvent'>
+  <image src='../../images/scan.png'></image>
 </view>
 
 <!--定位  -->
-<view class='location-view' bindtap='locationClickEvent'>
-
+<view class='location-view tac' bindtap='locationClickEvent'>
+  <label>中山</label>
+  <image src='../../images/down.png'></image>
 </view>
 
 <!--顶部轮播  -->
@@ -18,18 +19,20 @@
         </view>
       </swiper-item>
     </view>
-  </swiper>
+      </swiper>
 
   <!--小点  -->
   <view class='swiper-dots-view row-view'>
-    <view class="swiper-dots {{swiperCurrent == index ?  'active' : ''}}" wx:for="{{itemArr}}" wx:key="id"></view>
+      <view class="swiper-dots {{swiperCurrent == index ?  'active' : ''}}" wx:for="{{itemArr}}" wx:key="id"></view>  
+     <!-- <view animation="{{swiperCurrent == index ?  'dotsAnimation' : ''}}" class="swiper-dots" wx:for="{{itemArr}}" wx:key="id"></view>  -->
   </view>
 </view>
 
 <!--功能按钮  -->
 <view class='fun row-view'>
   <!--搜索栏  -->
-  <view class='mid-search-bar boxsize' style="width:{{searchBarWidth}}px;height:{{searchBarHeight}}px;top:-{{searchBarHeight * 0.5}}px">
+  <view class='mid-search-bar boxsize' style="width:{{searchBarWidth}}px;height:{{searchBarHeight}}px;top:-{{searchBarHeight * 0.5}}px"
+  bindtap='searchClickEvent'>
     您想学习什么知识
   </view>
 
@@ -62,12 +65,14 @@
 
 <!--热门课程  -->
 <view class='hot boxsize' style='padding:0px {{contentPadding}}px 0px;'>
-  <view class='rec-top '>
-    <view class='rec-top-item left'>热门课程</view>
-    <view class='rec-top-item right'>更多></view>
+ <view class='rec-top boxsize'>
+    <label class='rec-title'>推荐课程</label>
+    <label class='rec-more'>更多></label>
   </view>
 
   <view class='hot-content col-view'>
+    <!--课时  -->
+    <view class='cls-time tac'>课时</view>
     <image src='{{hot.url}}' style='width:100%'></image>
     <view class='hot-label-view row-view'>
       <label class='hot-title text-hidden'>{{hot.title}}</label>
