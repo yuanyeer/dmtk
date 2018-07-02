@@ -1,0 +1,52 @@
+<view class="store-top">
+  <view class='store-top-cell row-view boxsize' wx:for="{{topArr}}" wx:key="id">
+    <image src='{{item.icon}}' wx:if="{{item.icon != null}}"></image>
+    <label>{{item.title}}</label>
+    <image class='arrow' src='../../images/arrow.png' wx:if="{{item.action != null}}"></image>
+  </view>
+</view>
+
+
+<!--使用门店  -->
+<view class='tabBar row-view'>
+  <view class="tac fg-gray {{item.isSel == true ? 'tabBar-selected':''}}" wx:for="{{tabBarArr}}" wx:key="id" bindtap='tabBarClickEvent' data-idx="{{item.idx}}">
+    {{item.title}}
+    <view class='line' wx:if="{{item.isSel == true}}"></view>
+  </view>
+</view>
+
+<!--内容  -->
+<view class='content'>
+  <view class='store-detail boxsize' wx:if="{{curPage == 0}}">
+    <!--图片  -->
+    <view class='subTitle' style="margin-top:30rpx;">门店图片</view>
+    <view class='store-images row-view'>
+      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+        <image class='store-image-item' wx:for="{{storeImages}}" wx:key="id" src="{{item}}" bindtap='storeImgClickEvent' data-img="{{item}}"></image>
+      </scroll-view>
+    </view>
+
+    <!--老师图片  -->
+    <view class='subTitle' style="margin-top:30rpx;">门店图片</view>
+    <view class='teacher-container boxsize'>
+      <scroll-view scroll-x style="width:100%;white-space: nowrap">
+        <view class='teacher-cell' wx:for="{{teachers}}" wx:key="id">
+          <image src='{{item.img}}'></image>
+          <view class='tea-type fg-black'>{{item.cate}}
+            <label class='tea-tag fg-green border-green tag boxsize' wx:if="{{item.tag != null}}">{{item.tag}}</label>
+          </view>
+          <label class='tea-name fg-black'>{{item.name}}</label>
+        </view>
+      </scroll-view>
+    </view>
+
+
+    <!--地图  -->
+    <map class='map-view' id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+
+  </view>
+
+  <!--课程列表  -->
+  <courseList contentPadding='{{contentPadding}}' contentItemW='{{contentItemW}}' recArr='{{recArr}}' bind:courseClickEvent="courseClickEvent" wx:if="{{curPage == 1}}" marginTop="10">
+  </courseList>
+</view>

@@ -38,8 +38,28 @@ label view text {
 }  
 
 .fg-green {
-  color: #80B08A;
+  color: #69BE7A;
 }
 .bg-green {
-  background-color: #80B08A;
+  background-color: #69BE7A;
+}
+.border-green {
+  border: 2rpx solid #69BE7A;
+}
+
+.fg-orange {
+  color: #FF9320;
+}
+.bg-orange {
+  background-color: #FF9320;
+}
+
+.fg-gray {
+  color: #666666;
+}
+.fg-lightGray {
+  color: #999999;
+}
+.fg-black {
+  color:#333333;
 }

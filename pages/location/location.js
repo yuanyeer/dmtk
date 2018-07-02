@@ -8,6 +8,8 @@ Page({
    */
   data: {
     cityPadding:15,
+    cityPaddingR:0,
+    cityItemPadding:10,
     cityItemW:0,
     indexArr:[],
     city:[],
@@ -25,9 +27,12 @@ Page({
   onLoad: function (options) {
     var screenW = util.getScrW();
     console.log(screenW)
-    var cityItemW = (screenW - this.data.cityPadding * 6) / 3;
+    var cityPaddingR = 40 * screenW / 375;
+    console.log('right:' + cityPaddingR)
+    var cityItemW = (screenW - this.data.cityItemPadding * 2 - this.data.cityPadding - cityPaddingR) / 3;
     this.setData({
-      cityItemW: cityItemW
+      cityItemW: cityItemW,
+      cityPaddingR: cityPaddingR
     })
     
 

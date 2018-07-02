@@ -2,8 +2,8 @@
   <view class='new-cell col-view tac' wx:for="{{dataArr}}" wx:key="id">
       <view class='top-date tac'>{{item.date}}</view>
       <view class='cell-content col-view'>
-        <label class='title'>{{item.title}}</label>
-        <text>{{item.text}}</text>
+        <label class='title fg-black'>{{item.title}}</label>
+        <text class="fg-lightGray">{{item.text}}</text>
         <image src='{{item.listImgUrl}}' wx:if="{{item.listImgUrl != null && item.listImgUrl.length > 0}}"></image>
       </view>
   </view>

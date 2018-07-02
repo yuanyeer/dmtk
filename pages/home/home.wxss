@@ -42,8 +42,7 @@ page {
   background-color: #fff;
   width: 40rpx;
   opacity: 1;
-  transition: width 0.25s,opacity 0.25s,background-color 0.25s;
-  
+  transition: width 0.25s,opacity 0.25s,background-color 0.25s; 
 }
 
 /*中间栏目  */

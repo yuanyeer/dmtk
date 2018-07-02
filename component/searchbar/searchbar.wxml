@@ -1,4 +1,3 @@
 <!--搜索框  -->
-<view class="search-bar" style='margin-top:{{marginTop}}px;margin-bottom: {{marginBottom}}px;padding-left:{{paddingLeft}}px;padding-right:{{paddingRight}}px;' >
-  <input id='input-bar' placeholder='请输入城市' bindinput='_inputEvent' confirm-type="确定"></input>
-</view>
+
+    <input class="search-bar" style='margin-top:{{marginTop}}px;margin-bottom: {{marginBottom}}px;padding-left:{{paddingLeft}}px;padding-right:{{paddingRight}}px;width:{{width}}rpx;height:{{80 * width / 690}}rpx;box-shadow:{{shX}}rpx {{shY}}rpx {{shM}}rpx {{shS}}rpx {{shColor}};border-radius:{{radius}}rpx;' id='input-bar' placeholder='请输入城市' bindinput='_inputEvent' confirm-type="确定"></input>

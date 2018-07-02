@@ -1,17 +1,21 @@
 <!--顶部搜索框  -->
-<searchbar bind:searchInputCallback="searchInputCallback" paddingRight="{{cityPadding}}" paddingLeft="{{cityPadding}}"></searchbar>
+<view class='top-content col-view boxsize'>
+  <searchbar bind:searchInputCallback="searchInputCallback" paddingRight="{{cityPadding}}" paddingLeft="{{cityPadding}}"></searchbar>
+</view>
+
 
 <view class='gps-view boxsize'>
+  <image src="../../images/location.png"></image>
   <label class='gps-city'>中山市</label>
   <label class='gps-title'>GPS定位到的城市</label>
 </view>
 
-<view class='hot-container'>
+<view class='hot-container boxsize' style="padding-left:{{cityPadding}}px;">
   <!--热门城市  -->
-  <label class='hot-title' style="margin-left:{{cityPadding}}px;">热门城市</label>
+  <label class='hot-title'>热门城市</label>
   <view class='hot-city row-view'>
 
-    <view class='hot-city-item tac' style="width:{{cityItemW}}px;margin-left:{{cityPadding}}px;" wx:for="{{hotCity}}" wx:key="id">
+    <view class='hot-city-item tac boxsize' style="width:{{cityItemW}}px;margin-right:{{cityItemPadding}}px" wx:for="{{hotCity}}" wx:key="id">
       {{item.name}}</view>
   </view>
 </view>

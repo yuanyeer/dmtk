@@ -1,35 +1,15 @@
-// pages/courses/course_detail.js
-const util = require('../../utils/appTool.js')
+// pages/search_resutl/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    itemArr: [{
-      color: "Red"
-    }, {
-      color: "Gray"
-    }, {
-      color: "Green"
-    }, {
-      color: "Blue"
-    }],
-    swiperHeight: 0,
-    curPage: 0,
-    tabBarArr: [{
-      idx: 0,
-      title: "课程介绍",
-      isSel: true
-    }, {
-      idx: 1,
-      title: "使用门店",
-      isSel: false
-    }],
     storeArr: [{
       title: "世宇乐园（政安店）",
       image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      location: "西区富华点388号鹿茸水解一项观察广场3楼西区富华点388号鹿茸水解一项观察广场3楼",
+      subTitle: "先放置店家宣传信息，后续补充评论，教学信息",
+      location:"小榄镇北区盈富豪宅3号二栋4楼308号",
       distance: 4.3,
       tags: [{
         title: "12名老师"
@@ -41,7 +21,8 @@ Page({
     }, {
       title: "世宇乐园（政安店）",
       image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      location: "西区富华点388号鹿茸水解一项观察广场3楼",
+      subTitle: "先放置店家宣传信息，后续补充评论，教学信息",
+      location: "小榄镇北区盈富豪宅3号二栋4楼308号",
       distance: 4.3,
       tags: [{
         title: "12名老师"
@@ -53,7 +34,8 @@ Page({
     }, {
       title: "世宇乐园（政安店）",
       image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      location: "西区富华点388号鹿茸水解一项观察广场3楼",
+      subTitle: "先放置店家宣传信息，后续补充评论，教学信息",
+      location: "小榄镇北区盈富豪宅3号二栋4楼308号",
       distance: 4.3,
       tags: [{
         title: "12名老师"
@@ -65,7 +47,8 @@ Page({
     }, {
       title: "世宇乐园（政安店）",
       image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      location: "西区富华点388号鹿茸水解一项观察广场3楼",
+      subTitle: "先放置店家宣传信息，后续补充评论，教学信息",
+      location: "小榄镇北区盈富豪宅3号二栋4楼308号",
       distance: 4.3,
       tags: [{
         title: "12名老师"
@@ -77,7 +60,8 @@ Page({
     }, {
       title: "世宇乐园（政安店）",
       image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      location: "西区富华点388号鹿茸水解一项观察广场3楼",
+      subTitle: "先放置店家宣传信息，后续补充评论，教学信息",
+      location: "小榄镇北区盈富豪宅3号二栋4楼308号",
       distance: 4.3,
       tags: [{
         title: "12名老师"
@@ -89,7 +73,8 @@ Page({
     }, {
       title: "世宇乐园（政安店）",
       image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      location: "西区富华点388号鹿茸水解一项观察广场3楼",
+      subTitle: "先放置店家宣传信息，后续补充评论，教学信息",
+      location: "小榄镇北区盈富豪宅3号二栋4楼308号",
       distance: 4.3,
       tags: [{
         title: "12名老师"
@@ -104,82 +89,56 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-    var screenW = util.getScrW();
-    var swiperH = 455 * screenW / 750;
-    this.setData({
-      swiperHeight: swiperH
-    })
+  onLoad: function (options) {
+  
   },
-  // 导航栏点击事件
-  tabBarClickEvent: function(e) {
-    var idx = e.currentTarget.dataset.idx;
-    var arr = this.data.tabBarArr;
-    for (var index in arr) {
-      var item = arr[index]
-      item.isSel = false;
-      if (item.idx == idx) {
-        item.isSel = true;
-      }
-    }
 
-    this.setData({
-      tabBarArr: arr,
-      curPage: idx
-    })
-  },
-  // 门店点击事件
-  storeCellClickEvent:function() {
-    wx.navigateTo({
-      url: '../store/store',
-    })
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
-
+  onReady: function () {
+  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-
+  onShow: function () {
+  
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
-
+  onHide: function () {
+  
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
-
+  onUnload: function () {
+  
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
-
+  onPullDownRefresh: function () {
+  
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
-
+  onReachBottom: function () {
+  
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
-
+  onShareAppMessage: function () {
+  
   }
 })

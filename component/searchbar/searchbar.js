@@ -19,6 +19,34 @@ Component({
     paddingLeft:{
       type:String,
       value:""
+    },
+    width:{
+      type:String,
+      value:"690"
+    },
+    shX:{
+      type:String,
+      value:"0"
+    },
+    shY: {
+      type: String,
+      value: "10"
+    },
+    shM: {
+      type: String,
+      value: "100"
+    },
+    shS: {
+      type: String,
+      value: "10"
+    },
+    shColor: {
+      type: String,
+      value: "#F0F0F0"
+    }, 
+    radius:{
+      type: String,
+      value: "50"
     }
 
   },

@@ -2,6 +2,13 @@
 page {
   box-sizing: border-box;
 }
+/*顶部搜索  */
+.top-content {
+  align-items: center;
+  padding-top: 20rpx;
+  background-color: white;
+}
+/*热门城市  */
 .hot-city {
   /* padding: 0 30rpx 0; */
   flex-wrap: wrap;
@@ -9,15 +16,18 @@ page {
 }
 /*GPS定位  */
 .gps-view {
-  margin:30rpx 0rpx;
-  padding-left: 30rpx;
+  margin:60rpx 0rpx 40rpx;
+  padding-left: 33rpx;
+  background-color: white;
 } 
+.gps-view image {
+  width: 30rpx;
+  height: 30rpx;
+}
 .gps-city {
   font-size: 30rpx;
+  margin-left: 10rpx;
 }
-
-
-/*热门城市容器  */
 .gps-title {
   margin-left: 15rpx;
   font-size: 23rpx;
@@ -31,46 +41,40 @@ page {
 .hot-title {
   display: inline-block;
   margin-top: 40rpx;
-  font-size: 26rpx;
-  color: gray;
+  font-size: 22rpx;
+  color: #999999;
 }
 .hot-city .hot-city-item {
   height: 70rpx;
-  margin-bottom: 30rpx;
+  margin-bottom: 20rpx;
   background-color: #fff;
   /* font-size: 30rpx; */
-  font-size: 26rpx;
+  font-size: 28rpx;
   border-radius: 10rpx;
-  color: #353535;
+  color: #333333;
   border: 2rpx solid lightgray;
 }
-.all-city-title {
-  display: inline-block;
-   font-weight: 700;
-   margin-top: 60rpx;
-   font-size: 17pt;
-   color: #353535;
-}
-
 
 /*城市列表  */
-.city-list {
-}
 .city-list view {
   color: #353535;
 }
-.start {
+.city-item:nth-child(1) {
+  height: 90rpx!important;
+}
+.city-list .start {
   background-color: #F4F5F9!important;
-  height: 50rpx!important;
-  font-size: 24rpx!important;
-  color: gray!important;
+  height: 40rpx;
+  font-size: 22rpx!important;
+  color: #999999!important;
 }
 .city-item {
   justify-content: flex-start;
   align-items: center;
   display: flex;
-  font-size: 26rpx;
-  height: 90rpx;
+  font-size: 28rpx;
+  color: #333333;
+  height: 80rpx;
 }
 
 /*索引  */
@@ -84,6 +88,7 @@ page {
 .indexes view {
   /* background-color: #abc; */
   margin-top: 16rpx;
-  color: #80B08A;
+  color: #569862;
+  font-size: 22rpx;
 }
 

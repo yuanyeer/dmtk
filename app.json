@@ -14,7 +14,9 @@
     "pages/vip/vip",
     "pages/bought/bought",
     "pages/login/bind",
-    "pages/order/order_detail"
+    "pages/order/order_detail",
+    "pages/store/store",
+    "pages/search_resutl/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,24 +25,24 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#a9b7b7",
-    "selectedColor": "#11cd6e",
+    "color": "#999999",
+    "selectedColor": "#69BE7A",
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "images/tab_bar/home.png",
+        "selectedIconPath": "images/tab_bar/home_sel.png",
         "iconPath": "images/tab_bar/home.png",
         "pagePath": "pages/home/home",
         "text": "首页"
       },
       {
-        "selectedIconPath": "images/tab_bar/order.png",
+        "selectedIconPath": "images/tab_bar/order_sel.png",
         "iconPath": "images/tab_bar/order.png",
         "pagePath": "pages/order/order",
         "text": "订单"
       },
       {
-        "selectedIconPath": "images/tab_bar/my.png",
+        "selectedIconPath": "images/tab_bar/my_sel.png",
         "iconPath": "images/tab_bar/my.png",
         "pagePath": "pages/my/my",
         "text": "我的"

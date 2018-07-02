@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "courseList": "/component/coursecell/coursecell",
+    "searchbar": "/component/searchbar/searchbar"
+  }
+}

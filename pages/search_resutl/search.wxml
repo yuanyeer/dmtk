@@ -1,0 +1,23 @@
+<searchbar class="top" bind:searchInputCallback="searchInputCallback" marginBottom="10" widthPercent="90">
+
+</searchbar>
+
+
+<!--门店列表  -->
+<view class='result'>
+  <view class='store-cell row-view boxsize' wx:for="{{storeArr}}" wx:key="id">
+    <image class='store-image' src="{{item.image}}"></image>
+    <view class='store-info col-view'>
+      <label class='store-title'>{{item.title}}</label>
+      <view class='store-detail col-view'>
+        <label class='subTitle fg-black'>{{item.subTitle}}</label>
+      </view>
+      <view class='fg-gray location fg-lightGray'>
+        {{item.location}}
+        <label class='dis fg-orange'>{{item.distance}}km</label>
+      </view>
+
+    </view>
+  </view>
+
+</view>

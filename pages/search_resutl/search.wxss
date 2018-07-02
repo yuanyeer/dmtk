@@ -1,0 +1,62 @@
+/* pages/search_resutl/search.wxss */
+@import '../../css/global-css/base.wxss';
+page {
+  background-color: #FAFBFD;
+}
+/*容器  */
+.result {
+  margin-bottom: 30rpx;
+}
+/*门店cell  */
+.store-cell {
+  width: 100%;
+  padding: 0rpx 30rpx 0rpx; 
+  margin-top: 20rpx; 
+  height: 230rpx;
+}
+.store-image {
+  width: 45%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.store-info {
+  width: 55%;
+  margin-left: 20rpx;
+  height: 100%;
+  justify-content: center;
+  align-items:flex-start;
+  display: flex;
+}
+.store-title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.store-detail {
+  margin: 15rpx 0rpx;
+}
+.store-detail .location {
+  font-size: 24rpx;
+}
+.store-detail .distance {
+  font-size: 24rpx;
+}
+.store-tag-item {
+  margin-right: 10rpx;
+  border-radius: 20rpx;
+  padding: 5rpx 10rpx 5rpx;
+}
+.tag {
+  font-size: 18rpx;
+  font-weight: 400;
+  border-radius: 8rpx;
+  padding: 3rpx 5rpx 3rpx;
+}
+.subTitle {
+  font-size: 25rpx;
+}
+.location {
+  font-size: 23rpx;
+}
+.dis {
+  margin-left: 30rpx;
+}

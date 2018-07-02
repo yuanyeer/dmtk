@@ -77,7 +77,7 @@ Page({
   //搜索栏点击
   searchClickEvent:function(e) {
     wx.navigateTo({
-      url: '../search_resutl/search_result',
+      url: '../search_resutl/search',
     })
   },
   // 中间功能按钮点击

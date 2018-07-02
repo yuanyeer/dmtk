@@ -15,25 +15,61 @@
 <view class='course-info-view row-view boxsize'>
   <view class='title-view'>
     标题标题标题标题标题标题标题标题
+    <label class='tag border-green fg-green'>莫莉幻想</label>
   </view>
-  <view class='course-price col-view'>
-    <label class='price'>￥1234.5</label>
-    <label class='count'>共4个课时</label>
+  <view class='course-time col-view bg-green tac'>
+    <label class='count'>34</label>
+    <label class='title'>课时</label>
+  </view>
+
+  <view class='price-view'>
+    <label class='price fg-orange'>￥1234.00</label>
+    <label class='pre-price fg-lightGray'>(36元/课时)</label>
   </view>
 </view>
 
 <!--使用门店  -->
 <view class='course-tabBar row-view'>
-  <view class='tac tabBar-selected'>使用门店</view>
-  <view class='tac'>课程介绍</view>
+
+
+  <view class="tac fg-gray {{item.isSel == true ? 'tabBar-selected':''}}" wx:for="{{tabBarArr}}" wx:key="id" bindtap='tabBarClickEvent' data-idx="{{item.idx}}">
+    {{item.title}}
+    <view class='line' wx:if="{{item.isSel == true}}"></view>
+  </view>
 </view>
 
 <!--内容列表  -->
-<view class='table-list'></view>
+<view class='table-list'>
+  <!--课程介绍  -->
+    <view class='course-introduce' wx:if="{{curPage == 0}}">课程介绍</view>
+
+  <!--门店列表  -->
+  <view class='store-cell row-view boxsize' wx:for="{{storeArr}}" wx:key="id" wx:if="{{curPage == 1}}" bindtap='storeCellClickEvent'>
+    <image class='store-image' src="{{item.image}}"></image>
+    <view class='store-info col-view'>
+      <label class='store-title fg-black'>{{item.title}}</label>
+      <view class='store-detail row-view'>
+        <image src="../../images/location"></image>
+        <label class='location'>{{item.location}}</label>
+        <label class='distance fg-orange'>{{item.distance}}km</label>
+
+      </view>
+      <view class='store-tag row-view'>
+        <label class='store-tag-item tag border-green fg-green' wx:for="{{item.tags}}" wx:for-item="tagItem" wx:key="idx">
+          {{tagItem.title}}
+        </label>
+      </view>
+    </view>
+
+  
+  </view>
+
+
+</view>
 
 
 <!--购买栏  -->
 <view class='bot-bar row-view'>
-  <label>价格:￥123456</label>
-  <button class='tac'>立即购买</button>
+  <label>收藏课程</label>
+  <button class='tac bg-green'>立即购买</button>
 </view>

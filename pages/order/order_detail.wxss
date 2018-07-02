@@ -1,92 +1,120 @@
+/* pages/courses/course_detail.wxss */
 @import '../../css/global-css/base.wxss';
-.top {
-  height: 400rpx;
-  background-color: #abc;
-  position: relative;
+page {
+  background-color:#F0F0F0; 
 }
-.shared {
-  width: 60rpx;
-  height: 60rpx;
-  background-color: aqua;
-  position: absolute;
-  right: 20rpx;
-  top: 20rpx;
-}
-.mid {
-  padding: 0rpx 20rpx 0rpx;
+/*top  */
+
+.course-info-view {
+  justify-content: space-between;
+  padding: 26rpx 26rpx 0;
   position: relative;
-  border-bottom: 2rpx solid #000;
+  height: 220rpx;
+  background-color: #fff;
 }
 
-/*mid  */
 .title-view {
+  font-size: 30rpx;
+  width: 60%;
+  font-weight: 700;
+}
+
+.tag {
+  font-size: 18rpx;
+  font-weight: 400;
+  border-radius: 8rpx;
+  padding: 3rpx 5rpx 3rpx;
+}
+
+/*课时  */
+
+.course-time {
+  height: 98rpx;
+  width: 98rpx;
+  color: white;
+  border-radius: 8rpx;
+  box-shadow: 0rpx 15rpx 20rpx 8rpx #f0f0f0;
+}
+
+.count {
+  font-size: 38rpx;
+}
+
+.title {
+  font-size: 18rpx;
+}
+
+.price-view {
+  position: absolute;
+  bottom: 26rpx;
+  left: 26rpx;
+}
+
+.price-view .pre-price {
+  font-size: 26rpx;
+  color: lightgray;
+  margin-left: 5rpx;
+}
+/*进度  */
+.progress {
+  width: 100%;
+  height: 200rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  overflow: hidden;
+  padding: 0 30rpx 0;
+}
+.progress .title {
+  width: 100%;
+  font-size: 32rpx;
+  font-weight: 700;
   margin-top: 20rpx;
   position: relative;
 }
-.title-view .title{
-  display: inline-block;
-  width: 80%;
-  font-size: 34rpx;
-  font-weight: 700;
-}
-.title-view .count {
-  font-size: 28rpx;
+.more-record {
   position: absolute;
   right: 0;
   bottom: 0;
+  font-size: 24rpx;
 }
-.price {
-  margin-top: 30rpx;
-  font-size: 28rpx;
-}
-.progress {
-  border-radius: 20rpx;
-  overflow: hidden;
+.progress-view {
   width: 100%;
-  height: 120rpx;
-  background-color: #abc;
+  height: 30rpx;
+  background:-webkit-linear-gradient(left,#7239FB,#5AEFC5);
   margin-top: 30rpx;
-}
-.successed {
-  height: 100%;
-  width: 30%;
-  background-color: green;
-}
-.bind-view {
-  margin-top: 40rpx;
-  position: relative;
-  margin-bottom: 30rpx;
-}
-.bind-title {
-  font-size: 28rpx;
-}
-.bind {
-  float: right;
-  font-size: 28rpx;
+  border-radius: 15rpx;
 }
 
-/*intro  */
-.intro {
-  margin-bottom: 100rpx;
-  padding: 30rpx 20rpx 30rpx;
-}
-.intro-title {
-  font-size: 34rpx;
-  font-weight: 700;
-}
-
-.intro text {
+/*课程介绍  */
+.course-introduce {
+  width: 100%;
+  height: 1000rpx;
+  background-color: white;
   margin-top: 20rpx;
-  font-size: 28rpx;
+  padding: 0 30rpx 0;
+  overflow: hidden;
 }
-.scan-btn {
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  background-color: orange;
-  color: white;
-  outline: none;
-  border-radius: 0rpx;
+.course-introduce .title {
+  width: 100%;
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+/*购买栏目  */
+
+.bot-bar {
   width: 100%;
   height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  color: white;
+  font-size: 34rpx;
+}
+.bot-bar image {
+  width: 40rpx;
+  height: 40rpx;
 }

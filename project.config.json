@@ -115,6 +115,18 @@
 					"name": "订单详情",
 					"pathName": "pages/order/order_detail",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "门店详情",
+					"pathName": "pages/store/store",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search_resutl/search",
+					"query": ""
 				}
 			]
 		}
