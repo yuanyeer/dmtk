@@ -1,62 +1,101 @@
 @import '../../css/global-css/base.wxss';
 page {
-  background-color: #FAFBFD;
+  background-color: #fff;
 }
 .top {
   background-color: #fff;
   width: 100%;
-  height: 88rpx;
+  height: 80rpx;
   border-top: 2rpx solid gainsboro;
   border-bottom: 2rpx solid gainsboro;
 }
 .top-item {
   width: 50%;
   height: 100%;
-  color: #ccc;
+  color: #666666;
   font-size: 30rpx;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.line {
+  position: absolute;
+  width: 30rpx;
+  height: 8rpx;
+  background-color: #69BE7A;
+  bottom: 0;
+  left:50%;
+  margin-left: -15rpx;
+  border-radius: 10rpx;
 }
 .use {
-  color: #5DB96F;
+  color:#69BE7A;
 }
-
-.order-item {
-  padding-left: 30rpx;
-  padding-right: 30rpx;
-  width: 100%;
-  height: 320rpx;
-  margin-bottom: 4rpx;
-  background-color: #fff;
+/*顶部vip  */
+.vip-shadow {
+  position: absolute;
+  top: 80rpx;
+  left: -5rpx;
+   z-index: 1; 
 }
-.order-top {
-  width: 100%;
-  height: 76rpx;
-  padding-left: 40rpx;
-  font-size: 28rpx;
-  justify-content: center;
-  color: #ccc;
+.vip-view {
+  margin-top: 30rpx;
+  padding: 20rpx;
+  position: absolute;
+  z-index: 1;
+  justify-content: space-between;
 }
-
-.order-content image {
-  width: 50%;
-  height: 200rpx;
-  border-radius: 16rpx;
+.vip-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
 }
-.order-detail {
-  width: 50%;
-  height: 200rpx;
-  padding: 10rpx 16rpx 10rpx;
+.vip-type {
+  position: absolute;
+  right: 0;
   font-size: 22rpx;
+  color: #fff;
 }
-.order-title {
+.vip-top {
+  align-items: center;
+  display: flex;
+  position: relative;
+  z-index: 111;
+}
+.vip-bottom {
+  width: 100%;
+  height: 30rpx;
+  /* position: absolute;
+  left: 20rpx;
+  bottom: 20rpx; */
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  position: relative;
+  z-index: 111;
+}
+.vip-desc {
   font-size: 28rpx;
+  color: #fff;
 }
-.order-next {
-  margin-top: 20rpx;
-  color: orange;
+.vip-date {
+  font-size: 22rpx;
+  color: #fff;
 }
-.order-complete {
-  margin-top: 10rpx;
-  color: #ccc;
+.vip-top image{
+  width: 33rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.vip-top .name {
+  font-size: 24rpx;
+  color: #fff;
+  margin-left: 10rpx;
+}
+.icon {
+  background-color: #abc;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
 }

@@ -3,6 +3,6 @@
       <image src='{{item.icon}}'></image>
       <label>{{item.title}}</label>
       <label class='subTitle'>{{item.subTitle}}</label>
-      <image class='arrow' src='../../images/arrow.png'></image>
+      <image class='arrow' src='../../images/my/arrow.png'></image>
   </view>
 </view>

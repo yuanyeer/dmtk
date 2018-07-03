@@ -1,9 +1,18 @@
-<view class="top tac">
+<view class="top tac col-view bg-green" >
   <view class='user-icon'></view>
-  <view class='notification' bindtap='newClickEvent'></view>
+  <label>Hinder</label>
+  <view class='notification' bindtap='newClickEvent'>
+    <image src='../../images/my/new.png'></image>
+  </view>
 </view>
-<view class='ad' bindtap='vipItemClickEvent'>
-  VIP
+<view class='ad boxsize' bindtap='vipItemClickEvent'>
+  <image src='../../images/my/vip-icon.png'></image>
+  <view class='vip-info col-view'>
+    <label class='title'>成为VIP,让游乐再无后顾之忧</label>
+    <label class='sub-title'>全站海量课程无限玩</label>
+  </view>
+
+  <image class='vip-arrow' src='../../images/my/arrow.png'></image>
 </view>
 
 <setcell dataArr="{{dataArr}}" cellHeight="56"

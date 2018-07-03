@@ -1,2 +1,14 @@
-<!--component/ordercell/ordercell.wxml-->
-<text>component/ordercell/ordercell.wxml</text>
+<view class='content col-view ' style="margin-top:{{marginTop}}rpx">
+    <view class='order-item boxsize' bindtap='orderClickEvent' wx:for="{{orderArr}}" wx:key="id"
+    bindtap='_orderCellClickEvent'>
+      <view class='order-content row-view'>
+        <view class='float-class bg-green tac boxsize'>共18课时</view>
+        <image src="{{item.url}}" style="height:{{imgH}}px;width:{{imgW}}px"></image>
+        <view class='order-detail col-view boxsize'>
+          <label class='order-title'>{{item.title}}</label>
+          <label class='order-next fg-orange'>下一节：{{item.next}}</label>
+          <label class='order-complete'>已完成：{{item.complete}}</label>
+        </view>
+      </view>
+    </view>
+</view>

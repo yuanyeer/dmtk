@@ -1,4 +1,5 @@
 // pages/order/order_detail.js
+const util = require('../../utils/appTool.js')
 Page({
 
   /**
@@ -97,14 +98,27 @@ Page({
       }, {
         title: "400m教学区"
       }]
-    }]
+    }],
+    topW:0,
+    topH:0,
+    progress:0,
+    progressW:0,
+    isDone:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var screenW = util.getScrW();
+    var topH = screenW * 455 / 750;
+    var progressW = screenW - 30;
+    this.setData({
+      topW:screenW,
+      topH: topH,
+      progress:100,
+      progressW: progressW
+    })
   },
 
   /**

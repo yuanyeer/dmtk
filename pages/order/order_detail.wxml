@@ -1,10 +1,13 @@
 <!--顶部导航  -->
-<view class='top' style="height:{{swiperHeight}}px">
-  <swiper indicator-dots="true" autoplay="false" duration="250" style="height:{{swiperHeight}}px">
+<view class='top boxsize' style="height:{{topH}}px;width:100%;">
+<view class='float-share tac boxsize' wx:if="{{isDone == false}}">
+  <image src="../../images/order/share.png"></image>
+</view>
+  <swiper indicator-dots="true" autoplay="false" duration="250" style="height:{{topH}}px">
     <!--swiper-item只能包含一个节点再多会自动删除-->
     <view wx:for='{{itemArr}}' wx:key="id">
       <swiper-item>
-        <view style=" height:{{swiperHeight}}px;background-color:{{item.color}}">
+        <view style=" height:{{topH}}px;background-color:{{item.color}}">
         </view>
       </swiper-item>
     </view>
@@ -13,16 +16,18 @@
 
 <!--课程标题 价钱  -->
 <view class='course-info-view row-view boxsize'>
-  <view class='title-view'>
+  <view class='title-view fg-black'>
     标题标题标题标题标题标题标题标题
-    <label class='tag border-green fg-green'>莫莉幻想</label>
+    <view class='tag border-green fg-green'>莫莉幻想</view>
   </view>
+  <!--课时  -->
+   <image class='shadow' src="../../images/order/shadow.png"></image> 
   <view class='course-time col-view bg-green tac'>
     <label class='count'>34</label>
     <label class='title'>课时</label>
   </view>
 
-  <view class='price-view'>
+  <view class='price-view boxsize'>
     <label class='price fg-orange'>￥1234.00</label>
     <label class='pre-price'>(36元/课时)</label>
   </view>
@@ -30,22 +35,33 @@
 
 <!--进度  -->
 <view class='progress boxsize'>
-  <view class='title row-view'>课程进度
-    <view class='more-record fg-green'>详细记录 > </view>
+  <view class='title row-view fg-black boxsize'>课程进度
+    <view class='more-record fg-green'>详细记录 
+      <image src="../../images/order/arrow.png"></image>
+    </view>
   </view>
-  <view class='progress-view'></view>
+  <view class='progress-number' style="width:{{progressW * (progress / 100)+10}}px" wx:if="{{progress>0}}">{{progress}}%</view>
+  <view class='progress-view boxsize'>
+     <image style="width:{{progress}}%" src="../../images/order/progress.png"></image> 
+  </view>
+  <view class='progress-title' style="width:{{progressW * (progress / 100) + 28}}px" wx:if="{{progress !=100 && progress <= 90}}">第八课时、肢体训练</view>
+
+    <view class='progress-title' style="width:{{progressW * (progress / 100) }}px" wx:if="{{progress !=100 && progress > 90}}">第八课时、肢体训练</view>
+
+
+    <view class='progress-title' style="width:{{progressW * (progress / 100) }}px" wx:if="{{progress ==100 && isDone == true}}">已完成该课程</view>
 </view>
 
 
 <!--课程介绍  -->
-<view class='course-introduce'>
+<view class='course-introduce boxsize'>
   <view class='title'>课程介绍
   </view>
 </view>
 
 
 <!--购买栏  -->
-<view class='bot-bar row-view tac bg-green'>
-  <image src='../../images/scan.png'></image>
-  扫描二维码
+<view class='bot-bar row-view bg-green boxsize'>
+  <image src="../../images/order/{{isDone == true ? 'share':'scan'}}.png"></image>
+  <label>扫描二维码</label>
 </view>

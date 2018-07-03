@@ -9,7 +9,7 @@ Page({
     orderArr:[{
       top:"世宇乐园",
       url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title:"英语早教班，坚持全英对话学习",
+      title:"英语早教班，坚持全英对话学习11",
       next:"7.词语性转化记忆技巧",
       complete:"6.单词快速记忆"
     }, {
@@ -34,7 +34,13 @@ Page({
       }],
       imageW : 0,
       useBtnClass:"use",
-      unabelBtnClass: ""
+      unabelBtnClass: "",
+      imgW:0,
+      imgH:0,
+      isVip:true,
+      vipW:0,
+      vipH:0,
+      orderListTop:0
   },
  //顶部分类点击
   orderCatClickEvent:function(e){
@@ -56,17 +62,32 @@ Page({
    */
   onLoad: function (options) {
     var screenW = util.getScrW();
-    var imageW = (screenW - 15 * 2 ) * 0.5;
-    this.setData({
-      imageW: imageW
-    })
 
-    wx.authorize({
-      scope: 'userInfo',
+    var imgW = screenW * 0.44;
+    var imgH = imgW * 100 / 165;
+
+    console.log(imgW +"--" +imgH)
+
+    var vipW = screenW * 0.92;
+    var vipH = vipW * 200 / 690;
+
+    var orderListTop = 20;
+    if(this.data.isVip) {
+      orderListTop = vipH+180;
+    }
+
+    this.setData({
+      imgW: imgW,
+      imgH: imgH,
+      vipW: vipW,
+      vipH: vipH,
+      orderListTop: orderListTop
     })
+    
   },
   //订单点击
-  orderClickEvent:function(e){
+  orderCellClickEvent:function(e){
+    console.log(e)
     wx.navigateTo({
       url: 'order_detail',
     })

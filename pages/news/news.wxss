@@ -4,36 +4,40 @@ page {
   background-color: #F4F5F9;
   box-sizing: border-box;
 }
+.content {
+  margin-top: 20rpx;
+}
 .new-cell {
-  margin-bottom: 40rpx;
+  margin-bottom: 60rpx;
 }
 .top-date {
   background-color: #CCCCCC;
   color: white;
   border-radius: 40rpx;
-  margin-top: 20rpx;
+  /* margin-top: 20rpx; */
   font-size: 18rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 30rpx;
   display: inline-block;
   padding: 10rpx 20rpx 10rpx;
 }
 .cell-content {
   background-color: #fff;
-  padding: 20rpx 40rpx 30rpx;
-  margin: 0px 20rpx;
+  padding: 20rpx 30rpx 30rpx;
+  margin: 0px 30rpx;
 }
 .cell-content .title{
-  font-size: 32rpx;
+  font-size: 28rpx;
+  color: #333333;
 }
 .cell-content text {
-  margin: 20rpx 0px 20rpx;
+  margin: 20rpx 0px 40rpx;
   display: -webkit-box;
-    font-size:28rpx;
-    color:#000000;
+    font-size:24rpx;
+    color:#666666;
     line-height: 40rpx;
     word-break: break-all;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp:2;
+    -webkit-line-clamp:3;
     overflow: hidden;
     text-overflow:ellipsis;
 }

@@ -30,11 +30,11 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "order",
+					"id": 0,
+					"name": "订单",
 					"pathName": "pages/order/order",
 					"query": ""
 				},

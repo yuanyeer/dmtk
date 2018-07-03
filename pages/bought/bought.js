@@ -1,62 +1,64 @@
 // pages/bought/bought.js
+const util = require('../../utils/appTool.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dataArr: [{
-      imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称",
-      subTitle: "进入课程详情页扫描机台启动课程",
-      date: "2018年10月28日",
-      statu:0
+    orderArr: [{
+      top: "世宇乐园",
+      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      title: "英语早教班，坚持全英对话学习",
+      next: "7.词语性转化记忆技巧",
+      complete: "6.单词快速记忆"
     }, {
-      imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "名称课程名称课程名称",
-      subTitle: "进入课程详情页扫描机台启动课程",
-      date: "2018年10月28日",
-      statu: 2
+      top: "世宇乐园",
+      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      title: "英语早教班，坚持全英对话学习",
+      next: "7.词语性转化记忆技巧",
+      complete: "6.单词快速记忆"
     }, {
-      imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "课程名称课程名称课程名称课程名称课程名程名称",
-      subTitle: "进入课程详情页扫描机台启动课程",
-      date: "2018年10月28日",
-      statu: 1
-    }, {
-      imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "课程名称课程名称课程名称课程名称课程名称",
-      subTitle: "进入课程详情页扫描机台启动课程",
-      date: "2018年10月28日",
-      statu: 0
-    }, {
-      imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "课程名称课程名称课程名称课程名称课程名称名称",
-      subTitle: "进入课程详情页扫描机台启动课程",
-      date: "2018年10月28日",
-      statu: 1
-    }, {
-      imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "课程名称课程名称课程名称课程名称课程名称",
-      subTitle: "进入课程详情页扫描机台启动课程",
-      date: "2018年10月28日",
-      statu: 1
-    }, {
-      imgUrl: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "课程名称课程名称课程名",
-      subTitle: "进入课程详情页扫描机台启动课程",
-      date: "2018年10月28日",
-      statu: 2
-    }]
+      top: "世宇乐园",
+      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      title: "英语早教班，坚持全英对话学习",
+      next: "7.词语性转化记忆技巧",
+      complete: "6.单词快速记忆"
+    },
+    {
+      top: "世宇乐园",
+      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      title: "英语早教班，坚持全英对话学习",
+      next: "7.词语性转化记忆技巧",
+      complete: "6.单词快速记忆"
+    }],
+    imgW: 0,
+    imgH: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var screenW = util.getScrW();
 
+    var imgW = screenW * 0.44;
+    var imgH = imgW * 100 / 165;
+
+    console.log(imgW + "--" + imgH)
+
+    this.setData({
+      imgW: imgW,
+      imgH: imgH
+    })
   },
-
+  //订单点击
+  orderCellClickEvent:function(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: '../order/order_detail',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -49,7 +49,7 @@ page {
 .fun {
   width:100%;
   background-color:#fff;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: flex-end;
   border-bottom: 2rpx solid gainsboro;
   position: relative;
@@ -73,22 +73,22 @@ page {
   margin-top: 100rpx;
 }
 .fun-item {
-  width: 160rpx;
-  height: 160rpx;
+  width: 110rpx;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 24rpx;
+  margin-bottom: 20rpx;
+  margin-left: 62rpx;
 }
 .fun-item label {
+  margin-top: 10rpx;
   font-size: 26rpx;
   color: #333333;
 }
 .fun-item-icon {
-  width: 100rpx;
-  height: 100rpx;
-  background-color: #caf;
+  width: 60rpx;
+  height: 60rpx;
 }
 
 
@@ -114,6 +114,12 @@ page {
   float: right;
   color: #999999;
   font-size: 24rpx;
+   /* background-color: #abc;  */
+  padding-right: 10rpx;
+}
+.rec-more image {
+  width: 9rpx;
+  height: 17rpx;
 }
 .rec-loadmore {
   width: 100%;
@@ -123,6 +129,11 @@ page {
   align-items: center;
   color: #69BE79;
   font-size: 24rpx;
+}
+.rec-loadmore image {
+  margin-left: 10rpx;
+  width: 21rpx;
+  height: 18rpx;
 }
 
 
@@ -197,14 +208,14 @@ page {
   position: absolute;
   top: 20rpx;
   right: 20rpx;
-  width: 46rpx;
-  height: 46rpx;
+  width: 30rpx;
+  height: 30rpx;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
   border-radius: 50%;
-  padding: 12rpx;
+  padding: 18rpx;
 }
 .scan-view image {
-  width: 50rpx;
-  height: 50rpx;
+  width: 30rpx;
+  height: 30rpx;
 }

@@ -1,6 +1,6 @@
 <!-- 扫码 -->
 <view class='scan-view tac' bindtap='scanClickEvent'>
-  <image src='../../images/scan.png'></image>
+  <image src='../../images/home/scan.png'></image>
 </view>
 
 <!--定位  -->
@@ -31,7 +31,7 @@
 <!--功能按钮  -->
 <view class='fun row-view'>
   <!--搜索栏  -->
-  <view class='mid-search-bar boxsize' style="width:{{searchBarWidth}}px;height:{{searchBarHeight}}px;top:-{{searchBarHeight * 0.5}}px"
+  <view class='mid-search-bar boxsize' style="left:50%;margin-left:-{{searchBarWidth/2}}px;width:{{searchBarWidth}}px;height:{{searchBarHeight}}px;top:-{{searchBarHeight * 0.5}}px"
   bindtap='searchClickEvent'>
     您想学习什么知识
   </view>
@@ -39,7 +39,7 @@
 
     <view wx:for='{{functionArr}}' wx:key="id" class='fun-container'>
       <view class='fun-item' bindtap='functionBtnClickEvent'>
-        <view class='fun-item-icon' style='background-color:{{item.color}}'></view>
+        <image class='fun-item-icon' src="{{item.image}}"></image>
         <label>{{item.title}}</label>
       </view>
     </view>
@@ -50,7 +50,9 @@
 <view class='recommend'>
   <view class='rec-top boxsize' style='padding:0rpx {{contentPadding}}px 0rpx;'>
     <label class='rec-title'>推荐课程</label>
-    <label class='rec-more'>更多></label>
+    <view class='rec-more'>更多
+      <image src="../../images/home/arrow.png"></image>
+    </view>
   </view>
 
   <!--课程列表  -->
@@ -59,7 +61,8 @@
   </courseList>
 
   <view class='rec-loadmore row-view'>
-    换一批O
+    换一批
+    <image src="../../images/home/reload.png"></image>
   </view>
 </view>
 
@@ -67,7 +70,9 @@
 <view class='hot boxsize' style='padding:0px {{contentPadding}}px 0px;'>
  <view class='rec-top boxsize'>
     <label class='rec-title'>推荐课程</label>
-    <label class='rec-more'>更多></label>
+    <view class='rec-more'>更多
+      <image src="../../images/home/arrow.png"></image>
+    </view>
   </view>
 
   <view class='hot-content col-view'>

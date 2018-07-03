@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "已购"
+  "navigationBarTitleText": "已购",
+  "usingComponents": {
+    "orderList": "/component/ordercell/ordercell"
+  }
 }
