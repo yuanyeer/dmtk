@@ -1,6 +1,9 @@
+<view class='page-content boxsize'>
 <orderList
   orderArr="{{orderArr}}"
   imgH='{{imgH}}'
   imgW='{{imgW}}'
   bind:orderCellClickEvent="orderCellClickEvent"
 ></orderList>
+</view>
+

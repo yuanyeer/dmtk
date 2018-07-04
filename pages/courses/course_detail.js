@@ -16,19 +16,19 @@ Page({
       color: "Blue"
     }],
     swiperHeight: 0,
-    curPage: 0,
+    curPage: 1,
     tabBarArr: [{
       idx: 0,
       title: "课程介绍",
-      isSel: true
+      isSel: false
     }, {
       idx: 1,
       title: "使用门店",
-      isSel: false
+      isSel: true
     }],
     storeArr: [{
       title: "世宇乐园（政安店）",
-      image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      image: "http://localhost:8080/public/store.png",
       location: "西区富华点388号鹿茸水解一项观察广场3楼西区富华点388号鹿茸水解一项观察广场3楼",
       distance: 4.3,
       tags: [{
@@ -98,7 +98,9 @@ Page({
       }, {
         title: "400m教学区"
       }]
-    }]
+    }],
+    cellImgW:0,
+    cellImgH:0
   },
 
   /**
@@ -109,6 +111,13 @@ Page({
     var swiperH = 455 * screenW / 750;
     this.setData({
       swiperHeight: swiperH
+    })
+
+    var cellImgW = screenW * 0.37333;
+    var cellImgH = cellImgW * 210 / 280;
+    this.setData({
+      cellImgW: cellImgW,
+      cellImgH: cellImgH
     })
   },
   // 导航栏点击事件

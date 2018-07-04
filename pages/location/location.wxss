@@ -21,7 +21,7 @@ page {
   background-color: white;
 } 
 .gps-view image {
-  width: 30rpx;
+  width: 24rpx;
   height: 30rpx;
 }
 .gps-city {

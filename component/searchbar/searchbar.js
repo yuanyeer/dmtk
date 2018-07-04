@@ -14,7 +14,7 @@ Component({
     },
     paddingRight:{
       type:String,
-      value:""
+      value:"30"
     },
     paddingLeft:{
       type:String,
@@ -47,6 +47,10 @@ Component({
     radius:{
       type: String,
       value: "50"
+    },
+    plaText:{
+      type:String,
+      value:"请输入城市"
     }
 
   },
@@ -55,7 +59,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    inputText:""
   },
 
   /**
@@ -65,6 +69,14 @@ Component({
     // 输入框监听回调
     _inputEvent:function(e) {
       this.triggerEvent("searchInputCallback",{text: e.detail.value})
+      this.setData({
+        inputText: e.detail.value
+      })
+    },
+    _closeClickEvent:function(e){
+      this.setData({
+        inputText:""
+      })
     }
   }
 })

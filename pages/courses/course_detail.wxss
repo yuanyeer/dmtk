@@ -5,9 +5,10 @@ page {
 }
 /*top  */
 
+/*课程信息  */
 .course-info-view {
   justify-content: space-between;
-  padding: 35rpx 30rpx 0;
+  padding: 40rpx 30rpx 0;
   position: relative;
   height: 220rpx;
   background-color: #fff;
@@ -16,53 +17,69 @@ page {
 .title-view {
   font-size: 32rpx;
   width: 60%;
-  color: #333333;
   font-weight: 700;
-  line-height: 50rpx;
 }
 
 .tag {
+  /* width: 84rpx;
+  height: 30rpx; */
   font-size: 18rpx;
-  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+  line-height: 30rpx;
   border-radius: 8rpx;
-  padding: 5rpx 8rpx 5rpx;
+  padding: 1rpx 6rpx 1rpx;
 }
 
 /*课时  */
-
+.shadow {
+  position: absolute;
+  right: 0rpx;
+  top: 32rpx;
+  width: 152rpx;
+  height: 141rpx;
+  z-index: 1;
+}
 .course-time {
-  height: 100rpx;
-  width: 100rpx;
+  height: 80rpx;
+  width: 80rpx;
   color: white;
   border-radius: 8rpx;
-  box-shadow: 0rpx 15rpx 20rpx 8rpx #f0f0f0;
-  padding-bottom: 5rpx;
+  padding: 8rpx;
+  z-index: 999;
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+   /* box-shadow: 0rpx 15rpx 20rpx 8rpx #f0f0f0;  */
 }
 .course-time label {
   padding:0;
-  border:0;
   margin:0;
+  border:0;
 }
+
 .count {
   font-size: 44rpx;
 }
+
 .title {
-  margin-top: 0rpx;
+  margin-top: 8rpx;
   font-size: 20rpx;
 }
-
+.price {
+  font-size: 28rpx;
+}
 .price-view {
   position: absolute;
   bottom: 26rpx;
-  left: 30rpx;
-  font-size: 28rpx;
+  left: 26rpx;
 }
 
 .price-view .pre-price {
   font-size: 20rpx;
+  color: #999999;
   margin-left: 5rpx;
 }
-
 /*使用门店tabBar  */
 
 .course-tabBar {
@@ -109,36 +126,43 @@ page {
   background-color: white;
 }
 /*门店cell  */
+.store-container {
+  margin-top: 20rpx;
+}
 .store-cell {
   width: 100%;
   padding: 0rpx 30rpx 0rpx; 
   margin-bottom: 40rpx;
-  height: 230rpx;
 }
 .store-image {
-  width: 45%;
-  height: 100%;
   border-radius: 20rpx;
 }
 .store-info {
-  width: 55%;
   margin-left: 20rpx;
-  height: 100%;
-  justify-content: center;
-  align-items:flex-start;
+  width: 59%;
+  /* align-items: center; */
+   justify-content: center; 
   display: flex;
 }
 .store-title {
   font-size: 28rpx;
 }
 .store-detail {
-  margin: 15rpx 0rpx;
+  /* background-color: #abc; */
+  margin: 20rpx 0rpx 20rpx;
+}
+.store-detail image {
+  width: 20rpx;
+  height: 25rpx;
 }
 .store-detail .location {
-  font-size: 24rpx;
+  margin-left: 8rpx;
+  margin-right: 10rpx;
+  width: 80%;
+  font-size: 22rpx;
   color: lightgray;
   display: -webkit-box;
-  line-height: 40rpx;
+  line-height: 32rpx;
   word-break: break-all;
   -webkit-box-orient: vertical;
   -webkit-line-clamp:2;
@@ -146,10 +170,11 @@ page {
   text-overflow:ellipsis;
 }
 .store-detail .distance {
-  font-size: 24rpx;
+  font-size: 22rpx;
 }
 .store-tag-item {
-  margin-right: 10rpx;
+  font-size: 20rpx;
+  margin-right: 15rpx;
   border-radius: 20rpx;
   padding: 5rpx 10rpx 5rpx;
 }
@@ -165,18 +190,19 @@ page {
   align-items: center;
   background-color: white;
   opacity: 0.9;
+  justify-content: space-between;
 }
-
-.bot-bar label {
+.col-btn {
+  width: 50%;
+  height: 100%;
   font-size: 32rpx;
-  margin-left: 30rpx;
-  color: #333333;
 }
-
-.bot-bar button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.col-btn image{
+  margin-right: 10rpx;
+  width: 36rpx;
+  height: 28rpx;
+}
+.buy-btn {
   width: 50%;
   height: 100%;
   outline: none;
@@ -184,4 +210,9 @@ page {
   border-radius: 0rpx;
   color: white;
   font-size: 32rpx;
+}
+ .buy-btn image {
+  margin-right: 10rpx;
+  width: 29rpx;
+  height: 32rpx;
 }

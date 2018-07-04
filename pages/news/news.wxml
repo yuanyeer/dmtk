@@ -1,5 +1,5 @@
 <view class="content">
-  <view class='new-cell col-view tac' wx:for="{{dataArr}}" wx:key="id">
+  <view class='new-cell col-view tac' wx:for="{{dataArr}}" wx:key="id" bindtap='newsClickEvent'>
       <view class='top-date tac'>{{item.date}}</view>
       <view class='cell-content col-view'>
         <label class='title fg-black'>{{item.title}}</label>

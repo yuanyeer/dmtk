@@ -1,0 +1,23 @@
+/* pages/news/new_detail.wxss */
+@import '../../css/global-css/base.wxss';
+page {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.top-title {
+  width: 100%;
+  font-size: 34rpx;
+  font-weight: 700;
+  align-items: center;
+}
+.new-content {
+  margin-top: 60rpx;
+  width: 100%;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+.new-content images {
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+}

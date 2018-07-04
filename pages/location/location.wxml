@@ -1,11 +1,13 @@
 <!--顶部搜索框  -->
 <view class='top-content col-view boxsize'>
-  <searchbar bind:searchInputCallback="searchInputCallback" paddingRight="{{cityPadding}}" paddingLeft="{{cityPadding}}"></searchbar>
+  <searchbar bind:searchInputCallback="searchInputCallback" paddingRight="{{cityPadding}}" paddingLeft="{{cityPadding}}"
+  plaText="请输入关键字"
+  ></searchbar>
 </view>
 
 
 <view class='gps-view boxsize'>
-  <image src="../../images/location.png"></image>
+  <image src="../../images/course/location.png"></image>
   <label class='gps-city'>中山市</label>
   <label class='gps-title'>GPS定位到的城市</label>
 </view>

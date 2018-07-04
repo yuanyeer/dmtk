@@ -16,7 +16,8 @@
     "pages/login/bind",
     "pages/order/order_detail",
     "pages/store/store",
-    "pages/search_resutl/search"
+    "pages/search_resutl/search",
+    "pages/news/new_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

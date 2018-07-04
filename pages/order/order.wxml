@@ -21,4 +21,6 @@
   </view>
 </view>
 
-<orderList orderArr="{{orderArr}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent"></orderList>
+<orderList orderArr="{{orderArr}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent" wx:if="{{curPage == 0}}"></orderList>
+
+<orderList orderArr="{{enableOrders}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent" wx:if="{{curPage == 1}}"></orderList>

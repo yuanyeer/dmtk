@@ -1,66 +1,6 @@
 @import '../../css/global-css/base.wxss';
 
-.cell {
-  /* background-color: #abc; */
-  padding: 24rpx;
-  position: relative;
-}
-
-.cell-top {
-  width: 100%;
-  height: 220rpx;
-}
-
-.cell image {
-  width: 48%;
-  height: 100%;
-  border-radius: 20rpx;
-}
-
-.content {
-  margin-left: 20rpx;
-  width: 50%;
-  height: 100%;
-}
-
-.content .title {
-  font-size: 27rpx;
-  font-weight: 700;
-  display: -webkit-box;
-  line-height: 38rpx;
-  word-break: break-all;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.content .statu {
-   width: 50rpx; 
-  display: inline-block;
-  background-color: #abc;
-  font-size: 17rpx;
-  padding: 8rpx 8rpx 8rpx;
-  border-radius: 30rpx;
-  text-align: center;
-  margin-top: 15rpx;
-}
-
-.content .sub-title {
-  margin-top: 20rpx;
-  font-size: 24rpx;
-  color: lightgray;
-}
-
-.cell-bot {
-  /* background-color: #cfc; */
-  margin-top: 10rpx;
-}
-
-.date {
-  display: inline-block;
-  background-color: #cee;
-  font-size: 17rpx;
-  padding: 13rpx 10rpx 13rpx;
-  border-radius: 30rpx;
+.page-content {
+  padding-top: 20rpx;
+  border-top: 1rpx solid #F0F0F0;
 }

@@ -11,6 +11,15 @@
   border-radius: 20rpx;
 
 }
+.donw-label {
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.down-tag {
+  font-size: 18rpx;
+  padding: 1rpx 6rpx 3rpx;
+  border-radius: 8rpx;
+}
 .content {
   margin-top: 20rpx;
   overflow: hidden;

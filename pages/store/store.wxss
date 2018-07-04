@@ -1,22 +1,31 @@
 @import '../../css/global-css/base.wxss';
+
 page {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 }
+
 .store-top-cell {
   background-color: #fff;
-  height: 100rpx;
+  height: 90rpx;
   width: 100%;
-  border-top: 2rpx solid #F0F0F0;
+  border-top: 2rpx solid #f0f0f0;
   align-items: center;
   padding-left: 30rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
   position: relative;
 }
-.store-top-cell image {
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 10rpx;
+
+.store-top-cell .arrow {
+  width: 12rpx;
+  height: 22rpx;
 }
+
+.store-top-cell .left-icon {
+  margin-right: 15rpx;
+  width: 22rpx;
+  height: 22rpx;
+}
+
 .arrow {
   float: right;
   width: 30rpx;
@@ -31,79 +40,101 @@ page {
 
 .tabBar {
   margin-top: 20rpx;
-  height: 100rpx;
-  border-bottom: 2rpx solid lightgray;
+  height: 90rpx;
+  border-bottom: 1rpx solid lightgray;
   justify-content: center;
   display: flex;
   align-items: center;
   background-color: white;
+  font-size: 28rpx;
+  color: #666;
 }
+
 .tabBar>view {
   width: 50%;
   height: 100%;
-  font-size: 32rpx;
   position: relative;
 }
+
 .line {
   position: absolute;
   bottom: 0rpx;
-  width: 35rpx;
+  width: 30rpx;
   height: 8rpx;
-  background-color: #69BE7A;
+  background-color: #69be7a;
   border-radius: 4rpx;
   left: 50%;
   margin-left: -17.5rpx;
 }
-.tabBar-selected {
-  color: #69BE7A;
+
+.tabBar .tabBar-selected {
+  color: #69be7a;
+  font-size: 30rpx;
 }
 
 /*内容  */
+
 .content {
   background-color: #fff;
   overflow: hidden;
 }
 
 /*门店详情  */
-.store-detail {
-  padding: 0rpx 30rpx 0;
+
+.mainContent {
 }
+
+.store-detail {
+  padding-left: 30rpx;
+}
+
 .subTitle {
   font-size: 32rpx;
   font-weight: 700;
+  margin-top: 40rpx;
 }
+
 /*门店图片  */
+
 .store-images {
   margin-top: 20rpx;
 }
+
 .store-image-item {
-  width: 260rpx;
-  height: 200rpx;
   margin-right: 30rpx;
   border-radius: 20rpx;
 }
+
 /*老师  */
+
+.teacher-container-title {
+  margin-top: 60rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
 .teacher-container {
   margin-top: 20rpx;
 }
+
 .teacher-cell {
-  width: 260rpx;
   margin-right: 30rpx;
-  display:inline-block;
-  
+  display: inline-block;
   overflow: hidden;
 }
+
 .teacher-cell image {
   border-radius: 20rpx;
-  width: 260rpx;
-  height: 350rpx;
 }
+
 .tea-type {
-  font-size: 30rpx;
-}
-.tea-name {
   font-size: 28rpx;
 }
+
+.tea-name {
+  font-size: 24rpx;
+}
+
 .tag {
   font-size: 18rpx;
   padding: 4rpx 6rpx 4rpx;
@@ -112,8 +143,9 @@ page {
 }
 
 /*地图  */
+
 .map-view {
-  margin-top: 100rpx;
-  margin-bottom: 100rpx;
+  margin-top: 40rpx;
+  margin-bottom: 0rpx;
   display: block;
 }

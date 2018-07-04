@@ -13,18 +13,20 @@
 
 <!--课程标题 价钱  -->
 <view class='course-info-view row-view boxsize'>
-  <view class='title-view'>
+  <view class='title-view fg-black'>
     标题标题标题标题标题标题标题标题
-    <label class='tag border-green fg-green'>莫莉幻想</label>
+    <view class='tag border-green fg-green'>莫莉幻想</view>
   </view>
+  <!--课时  -->
+   <image class='shadow' src="../../images/order/shadow.png"></image> 
   <view class='course-time col-view bg-green tac'>
     <label class='count'>34</label>
     <label class='title'>课时</label>
   </view>
 
-  <view class='price-view'>
+  <view class='price-view boxsize'>
     <label class='price fg-orange'>￥1234.00</label>
-    <label class='pre-price fg-lightGray'>(36元/课时)</label>
+    <label class='pre-price'>(36元/课时)</label>
   </view>
 </view>
 
@@ -41,21 +43,21 @@
 <!--内容列表  -->
 <view class='table-list'>
   <!--课程介绍  -->
-    <view class='course-introduce' wx:if="{{curPage == 0}}">课程介绍</view>
+  <view class='course-introduce' wx:if="{{curPage == 0}}">课程介绍</view>
 
   <!--门店列表  -->
-  <view class='store-cell row-view boxsize' wx:for="{{storeArr}}" wx:key="id" wx:if="{{curPage == 1}}" bindtap='storeCellClickEvent'>
-    <image class='store-image' src="{{item.image}}"></image>
+  <view class='store-container' wx:if="{{curPage == 1}}">
+    <view class='store-cell row-view boxsize' wx:for="{{storeArr}}" wx:key="id"  bindtap='storeCellClickEvent'>
+    <image class='store-image' src="{{item.image}}" style="width:{{cellImgW}}px;height:{{cellImgH}}px"></image>
     <view class='store-info col-view'>
       <label class='store-title fg-black'>{{item.title}}</label>
       <view class='store-detail row-view'>
-        <image src="../../images/location"></image>
-        <label class='location'>{{item.location}}</label>
+        <image src="../../images/course/location.png"></image>
+        <label class='location'>{{item.location}}</label> 
         <label class='distance fg-orange'>{{item.distance}}km</label>
-
       </view>
       <view class='store-tag row-view'>
-        <label class='store-tag-item tag border-green fg-green' wx:for="{{item.tags}}" wx:for-item="tagItem" wx:key="idx">
+        <label class='store-tag-item border-green fg-green' wx:for="{{item.tags}}" wx:for-item="tagItem" wx:key="idx" >
           {{tagItem.title}}
         </label>
       </view>
@@ -63,6 +65,9 @@
 
   
   </view>
+  
+  </view>
+  
 
 
 </view>
@@ -70,6 +75,9 @@
 
 <!--购买栏  -->
 <view class='bot-bar row-view'>
-  <label>收藏课程</label>
-  <button class='tac bg-green'>立即购买</button>
+  <view class='tac col-btn fg-black'>
+  <image src="../../images/course/collection.png"></image>收藏课程</view>
+  <view class='tac buy-btn bg-green'>
+    <image src="../../images/course/buynow.png"></image>
+  立即购买</view>
 </view>

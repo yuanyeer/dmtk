@@ -18,7 +18,7 @@ Component({
     },
     marginTop:{
       type:String,
-      value:"200"
+      value:"0"
     }
   },
 

@@ -1,27 +1,18 @@
-// pages/vip/vip.js
-
-const util = require('../../utils/appTool.js')
+// pages/news/new_detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    vipCardW:0,
-    vipCardH:0
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var screenW = util.getScrW();
-    var vipCardW = screenW*0.92;
-    var vipCardH = vipCardW * 360 / 690;
-    this.setData({
-      vipCardW: vipCardW,
-      vipCardH: vipCardH
-    })
+  
   },
 
   /**

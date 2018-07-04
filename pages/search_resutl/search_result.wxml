@@ -1,11 +1,35 @@
-<searchbar class="top" bind:searchInputCallback="searchInputCallback"
-  marginBottom="10">
+<view class="top">
+  <searchbar class="top" bind:searchInputCallback="searchInputCallback" marginBottom="30" paddingLeft="20"
+  plaText="请输入关键字">
+  </searchbar>
+</view>
 
-</searchbar>
-<courseList
+ <courseList
  contentPadding='{{contentPadding}}'
  contentItemW='{{contentItemW}}'
  recArr='{{recArr}}'
- 
+ wx:if="{{showTable == 0}}"
+ bind:courseClickEvent="courseClickEvent"
 >
-</courseList>
+</courseList> 
+
+<!--门店列表  -->
+<view class='result' wx:if="{{showTable == 1}}">
+  <view class='store-cell row-view boxsize' wx:for="{{storeArr}}" wx:key="id" bindtap='storeCellClickEvent'>
+    <image class='store-image' src="{{item.image}}" style="width:{{storeImgW}}px;height:{{storeImgH}}px"></image>
+    <view class='store-info col-view'>
+      <label class='store-title'>{{item.title}}</label>
+      <view class='store-detail col-view'>
+        <label class='subTitle fg-black'>{{item.subTitle}}</label>
+      </view>
+      <view class='fg-gray location fg-lightGray row-view'>
+        <image class='location-icon' src="../../images/course/location.png"></image>
+        <label>{{item.location}}</label>
+        <view class='dis fg-orange'>{{item.distance}}km</view>
+      </view>
+      
+
+    </view>
+  </view>
+
+</view>

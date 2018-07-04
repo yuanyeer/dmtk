@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    topArr: [{ title: "猩猩欢乐反斗城（嘉盛广场店）" }, { title: "猩猩欢乐反斗城（嘉盛广场店）", icon: "../../images/location.png",action:"map",param:""}, { title: "猩猩欢乐反斗城（嘉盛广场店）",icon: "../../images/location.png",action:"phone",param:""}],
+    topArr: [{ title: "猩猩欢乐反斗城（嘉盛广场店）" }, { title: "西区日升美食城北100米路东(日化方外侧灯光)", icon: "../../images/store/location.png",action:"map",param:""}, { title: "0760-888525458",icon: "../../images/store/phone.png",action:"phone",param:""}],
     tabBarArr: [{
       idx: 0,
       title: "详情",
@@ -28,7 +28,9 @@ Page({
       latitude: 23.099994,
       longitude: 113.324520,
       width: 20,
-      height: 20
+      height: 20,
+      storeImgW:0,
+      storeImgH: 0
     }],
   },
 
@@ -41,7 +43,12 @@ Page({
     this.setData({
       contentItemW: contentItemW
     })
-    console.log(this.data.contentItemW)
+    var storeImgW = screenW * 0.373333;
+    var storeImgH = storeImgW * 210 / 280;
+    this.setData({
+      storeImgW: storeImgW,
+      storeImgH: storeImgH
+    })
   },
   // 导航栏点击事件
   tabBarClickEvent: function (e) {

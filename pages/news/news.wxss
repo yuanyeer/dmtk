@@ -42,6 +42,6 @@ page {
     text-overflow:ellipsis;
 }
 .cell-content image {
-  width: 100%;
-  height: 300rpx;
+  /* width: 300rpx;
+  height: 100%; */
 }

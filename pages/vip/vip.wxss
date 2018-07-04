@@ -2,63 +2,79 @@
 
 /*顶部  */
 .top {
-  height: 180rpx;
-  border-bottom: 2rpx solid gray;
+  height: 140rpx;
+  border-bottom: 2rpx solid #F0F0F0;
+  border-top: 2rpx solid #F0F0F0;
   align-items: center;
   display: flex;
 }
 .user-icon {
-  width: 120rpx;
-  height: 120rpx;
+  width: 80rpx;
+  height: 80rpx;
   /* background-color: #cca; */
   border: 2rpx solid #ccc;
   border-radius: 50%;
-  margin-left: 40rpx;
+  margin-left: 30rpx;
+}
+.name {
+  font-size: 28rpx;
+  font-weight: 700;
+}
+.subTitle {
+  font-size: 22rpx;
+}
+.text-view {
+  justify-content: space-around;
+  margin-left: 20rpx;
 }
 
 /*内容  */
-.text-view {
-  font-size: 28rpx;
-  margin-left: 20rpx;
+/*vip阴影  */
+.vip-shadow {
+  position: absolute;
+  top: 70rpx;
+  left:-10rpx;
+  z-index: 1;
 }
 .mid-view {
-  margin-top: 30rpx;
-  padding: 0px 30rpx 0px;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100rpx;
 }
 .mid-img {
-  width: 100%;
-  height: 500rpx;
-  border-radius: 20rpx;
+  margin-top: 30rpx;
+  position: relative;
+  z-index: 111;
 }
 .price-view {
-  margin-top: 30rpx;
-  font-size: 30rpx;
-  font-weight: 700;
+  margin-top: 60rpx;
+  font-size: 48rpx;
   position: relative;
 }
 .dis {
-  font-size: 18rpx;
-  background-color: #F0F0F0;
-  display: inline-block;
-  padding:8rpx 20rpx 8rpx;
-  border-radius: 20rpx;
+  top: -18rpx;
+  margin-left: 20rpx;
   position: absolute;
-  top: -20rpx;
-  left: 200rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background-color: #FF6046;
+  padding: 6rpx 15rpx 6rpx;
+  border-radius: 18rpx;
 }
-.detail .title{
-  margin-top: 40rpx;
+/*特权说明  */
+.spe-title {
+  margin-top: 100rpx;
+  font-size: 32rpx;
   font-weight: 700;
 }
-.detail text {
-  font-size: 28rpx;
+.vip-content text{
+  font-size: 24rpx;
 }
-
 /*底部支付  */
 
 .bot-pay {
   height: 100rpx;
-  border-top: 2rpx solid gray;
+  border-top: 2rpx solid #F0F0F0;
   background-color: #fff;
   position: fixed;
   bottom: 0px;
@@ -70,16 +86,15 @@
 .pay-btn {
   width: 50%;
   height: 100%;
-  background-color: orange;
   outline: none;
   color: white;
   position: absolute;
   right: 0px;
   bottom: 0px;
   border-radius: 0rpx;
-  font-size: 30rpx;
+  font-size: 32rpx;
 }
 .bot-pay label{
   margin-left: 30rpx;
-  font-size: 26rpx;
+  font-size: 32rpx;
 }
