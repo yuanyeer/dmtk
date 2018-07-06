@@ -1,13 +1,13 @@
-<view class="top row-view">
+<view class="top row-view boxsize">
   <!--顶部选择  -->
   <view class="top-item col-view {{item.isSel == true ? 'use':''}} " bindtap='orderCatClickEvent' wx:for="{{topArr}}" data-idx="{{item.tag}}" wx:key="id">{{item.title}}
     <view class='line' wx:if="{{item.isSel == true}}"></view>
   </view>
 </view>
 <!--vip 阴影  -->
-<image wx:if="{{isVip == true}}" class='vip-shadow' src="../../images/order/vip-shadow.png" style="width:{{vipW * 1.1}}px;height:{{vipH * 1.5}}px;"></image>
+  <image wx:if="{{isVip == true}}" class='vip-shadow' src="../../images/order/vip-shadow.png" style="width:{{vipW }}px;height:{{vipH * 1.5}}px;"></image>  
 <!--vip 卡  -->
-<view class='vip-view col-view boxsize' wx:if="{{isVip == true}}" style="width:{{vipW}}px;height:{{vipH}}px;left:50%;margin-left:-{{vipW*0.5}}px">
+ <view class='vip-view col-view boxsize' wx:if="{{isVip == true}}" style="width:{{vipW}}px;height:{{vipH}}px;left:50%;margin-left:-{{vipW*0.5}}px">
   <image class='vip-bg' src="../../images/order/vip-bg.png" style="width:{{vipW}}px;height:{{vipH}}px;"></image>
   <view class='vip-top row-view'>
     <view class='icon'></view>
@@ -16,10 +16,10 @@
     <view class='vip-type'>大麦天空年费会员</view>
   </view>
   <view class='vip-bottom row-view'>
-    <label class='vip-desc'>余额:10,500,369.00</label>
+    <label class='vip-desc'>全站海量课程无限玩</label>
     <label class='vip-date'>有效期至2018-08-08</label>
   </view>
-</view>
+</view> 
 
 <orderList orderArr="{{orderArr}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent" wx:if="{{curPage == 0}}"></orderList>
 

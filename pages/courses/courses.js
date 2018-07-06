@@ -1,13 +1,17 @@
 // pages/courses/courses.js
 const util = require('../../utils/appTool.js')
+
+const req = require('../../api/appFunc.js')
+const pro = require('../../utils/wxReq.js')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    topArr: [{ id: 0, title: "年龄段", select: "selected" }, { id: 1, title: "课时", select: "" }, { id: 2, title: "价格", select: "" }],
-    recArr: [{ url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }, { url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", title: "英语早教班，坚持全英对话学习", price: 11200, count: 9 }],
+    topArr: [{ id: 0, title: "年龄段", select: "selected", img: "../../images/course/down_sel.png", size: { width: 10, height: 8 } }, { id: 1, title: "课时", select: "", img: "../../images/course/du.png", size: { width: 10, height: 20 } }, { id: 2, title: "价格", select: "", img: "../../images/course/du.png", size: { width: 10, height: 20 } }],
+    recArr: [],
     contentPadding: 15,
     contentItemW: 0
   },
@@ -21,6 +25,26 @@ Page({
     this.setData({
       contentItemW: contentItemW
     })
+
+    //加载课程
+    wx.showLoading({
+      title: '正在加载',
+    })
+    var self = this;
+    pro.Get(req.api.course).then(function(res){
+      wx.hideLoading()
+      self.setData({
+        recArr:res.data.datas
+      })
+    },function(err){
+      wx.hideLoading()
+      wx.showModal({
+        title: '错误',
+        content: '服务端错误',
+        showCancel: false, //不显示取消按钮
+        confirmText: '确定'
+      })
+    })
   },
   topItemClickEvent:function(e) {
     var selectId = e.target.dataset.itemid
@@ -29,8 +53,14 @@ Page({
       var item = arr[index]
       if (item.id == selectId) {
         item['select'] = "selected"
+        if(item.id == 0) {
+          item.img = "../../images/course/down_sel.png"
+        }
       }else {
-        item['select'] = ""
+        item['select'] = "";
+        if (item.id == 0) {
+          item.img = "../../images/course/down_nor.png"
+        }
       }
     }
     this.setData({

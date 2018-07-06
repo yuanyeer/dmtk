@@ -15,6 +15,14 @@ page {
   position: relative;
 }
 
+.store-top-cell label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* padding-right: 50rpx; */
+  width: 85%;
+}
+
 .store-top-cell .arrow {
   width: 12rpx;
   height: 22rpx;

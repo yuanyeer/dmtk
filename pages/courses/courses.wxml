@@ -1,13 +1,14 @@
 <view class="top row-view">
-    <view class='top-item tac {{item.select}}' wx:for="{{topArr}}" wx:key="id"
-      bindtap='topItemClickEvent' 
-      data-itemId="{{item.id}}"
-    >{{item.title}}</view>
+    <view class='top-item {{item.select}} row-view' wx:for="{{topArr}}" wx:key="id" bindtap='topItemClickEvent' data-itemId="{{item.id}}">
+    {{item.title}}
+     <image src="{{item.img}}" style="width:{{item.size.width}}rpx;height:{{item.size.height}}rpx"></image> 
+    </view>
+    
 </view>
 
 <courseList
   contentPadding='{{contentPadding}}'
   contentItemW='{{contentItemW}}'
   recArr='{{recArr}}'
-  marginTop="70"
+  marginTop="60"
 ></courseList>

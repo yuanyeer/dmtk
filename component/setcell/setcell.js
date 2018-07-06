@@ -27,7 +27,13 @@ Component({
   methods: {
     // 课程点击
     _celltapEvent: function (e) {
-      this.triggerEvent("setCellClickEvent", { text: e })
-    } 
+      var idx = e.currentTarget.dataset.idx;
+      if(idx != 101) {
+        this.triggerEvent("setCellClickEvent", { text: e })
+      }
+    } ,
+    _kefuClickEvent:function(e) {
+      console.log('kefu')
+    }
   }
 })

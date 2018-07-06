@@ -1,4 +1,5 @@
 //app.js
+import wux from 'component/toast/wux.js'
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -36,7 +37,8 @@ App({
   globalData: {
     userInfo: null,
     proUrl:"",//正式环境URL
-    debugUrl:"",//调试环境URL
-    
-  }
+    debugUrl:"http://10.1.70.68:8080/",//调试环境URL
+    errText:"服务端错误"
+  },
+  wux: (scope) => new wux(scope)
 })

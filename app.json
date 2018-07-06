@@ -17,10 +17,11 @@
     "pages/order/order_detail",
     "pages/store/store",
     "pages/search_resutl/search",
-    "pages/news/new_detail"
+    "pages/news/new_detail",
+    "pages/kefu/kefu"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "black",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"

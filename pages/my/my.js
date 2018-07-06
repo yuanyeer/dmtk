@@ -7,16 +7,17 @@ Page({
    */
   data: {
     dataArr: [{ icon:"../../images/my/bou.png",
-      title: "已购", link: "../bought/bought",subTitle:"共三个游乐艇"
+      title: "已购", link: "../bought/bought",subTitle:"共三个游乐艇",
+      idx : 0
     }, {
         icon: "../../images/my/col.png",
-      title: "收藏", link: "../collection/collection", subTitle: "三个收藏等住你Pick"
+        title: "收藏", link: "../collection/collection", subTitle: "三个收藏等住你Pick", idx : 0
       }, {
         icon: "../../images/my/kefu.png",
-        title: "联系客服", link: "src:ssss"
+        title: "联系客服", link: "../kefu/kefu", idx : 101
     }, {
         icon: "../../images/my/set.png",
-      title: "设置", link: "src:ssss"
+        title: "设置", link: "src:ssss", idx : 0
       }]
   },
 

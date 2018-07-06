@@ -1,22 +1,31 @@
+
+<!--toast  -->
+<import src="../../component/toast/toast.wxml"/>
+<!-- is="toast" 匹配组件中的toast提示  如果用dialog的话这就是dialog -->
+<template is="toast" data="{{ ...$wux.toast }}"/>
+
+
+
+
+
+
+<!--顶部轮播  -->
+<view class='top' style="height:{{swiperHeight}}px">
 <!-- 扫码 -->
 <view class='scan-view tac' bindtap='scanClickEvent'>
   <image src='../../images/home/scan.png'></image>
 </view>
-
 <!--定位  -->
 <view class='location-view tac' bindtap='locationClickEvent'>
   <label>中山</label>
-  <image src='../../images/down.png'></image>
+   <image src='../../images/down.png'></image> 
 </view>
-
-<!--顶部轮播  -->
-<view class='top' style="height:{{swiperHeight}}px">
   <swiper current='{{swiperCurrent}}' autoplay="false" duration="250" style="height:{{swiperHeight}}px" bindchange='onSlideChangeEnd'>
     <!--swiper-item只能包含一个节点再多会自动删除-->
     <view wx:for='{{itemArr}}' wx:key="id">
       <swiper-item>
-        <view style=" height:{{swiperHeight}}px;background-color:{{item.color}}">
-        </view>
+        <image style=" height:{{swiperHeight}}px;background-color:{{item.color}}" src="{{item.img}}" mode='scaleToFill'>
+        </image>
       </swiper-item>
     </view>
       </swiper>
@@ -37,8 +46,8 @@
   </view>
 
 
-    <view wx:for='{{functionArr}}' wx:key="id" class='fun-container'>
-      <view class='fun-item' bindtap='functionBtnClickEvent'>
+    <view class='fun-container row-view'>
+      <view wx:for='{{functionArr}}' wx:key="id" class='fun-item' bindtap='functionBtnClickEvent'>
         <image class='fun-item-icon' src="{{item.image}}"></image>
         <label>{{item.title}}</label>
       </view>
@@ -67,7 +76,7 @@
 </view>
 
 <!--热门课程  -->
-<view class='hot boxsize' style='padding:0px {{contentPadding}}px 0px;'>
+<view class='hot boxsize' style='padding:0px {{contentPadding}}px 10px;'>
  <view class='rec-top boxsize'>
     <label class='rec-title'>推荐课程</label>
     <view class='rec-more'>更多
@@ -85,8 +94,11 @@
     </view>
 
     <view class='hot-bottom'>
-      <label class='hot-stars'>{{hot.stars}}</label>
-      <label class='hot-comment'>{{hot.comments}}</label>
+      <image wx:for="{{star}}" src="../../images/{{index <= (hot.starLevel-1) ? 'star_sel':'star'}}.png" wx:index="{{index}}"
+      wx:key="id"></image>
+      <label class='hot-star'>{{hot.star}}</label>
+      <label class='hot-comment'>{{hot.comments}}条评论</label>
     </view>
   </view>
 </view>
+

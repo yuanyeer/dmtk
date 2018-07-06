@@ -31,6 +31,36 @@ Page({
         title: "英语早教班，坚持全英对话学习",
         next: "7.词语性转化记忆技巧",
         complete: "6.单词快速记忆"
+      }, {
+        top: "世宇乐园",
+        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+        title: "英语早教班，坚持全英对话学习",
+        next: "7.词语性转化记忆技巧",
+        complete: "6.单词快速记忆"
+      }, {
+        top: "世宇乐园",
+        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+        title: "英语早教班，坚持全英对话学习",
+        next: "7.词语性转化记忆技巧",
+        complete: "6.单词快速记忆"
+      }, {
+        top: "世宇乐园",
+        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+        title: "英语早教班，坚持全英对话学习",
+        next: "7.词语性转化记忆技巧",
+        complete: "6.单词快速记忆"
+      }, {
+        top: "世宇乐园",
+        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+        title: "英语早教班，坚持全英对话学习",
+        next: "7.词语性转化记忆技巧",
+        complete: "6.单词快速记忆"
+      }, {
+        top: "世宇乐园",
+        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+        title: "英语早教班，坚持全英对话学习",
+        next: "7.词语性转化记忆技巧",
+        complete: "6.单词快速记忆"
       }],
 
     enableOrders: [{
@@ -73,14 +103,54 @@ Page({
         complete: "6.单词快速记忆",
         isDone: true,
         doneText: "宝宝好棒，完成了所有课程"
-      }],
+    }, {
+      top: "世宇乐园",
+      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      title: "英语早教班，坚持全英对话学习",
+      next: "7.词语性转化记忆技巧",
+      complete: "6.单词快速记忆",
+      isDone: true,
+      doneText: "宝宝好棒，完成了所有课程"
+      }, {
+        top: "世宇乐园",
+        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+        title: "英语早教班，坚持全英对话学习",
+        next: "7.词语性转化记忆技巧",
+        complete: "6.单词快速记忆",
+        isDone: true,
+        doneText: "宝宝好棒，完成了所有课程"
+    }, {
+      top: "世宇乐园",
+      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      title: "英语早教班，坚持全英对话学习",
+      next: "7.词语性转化记忆技巧",
+      complete: "6.单词快速记忆",
+      isDone: true,
+      doneText: "宝宝好棒，完成了所有课程"
+      }, {
+        top: "世宇乐园",
+        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+        title: "英语早教班，坚持全英对话学习",
+        next: "7.词语性转化记忆技巧",
+        complete: "6.单词快速记忆",
+        isDone: true,
+        doneText: "宝宝好棒，完成了所有课程"
+    }, {
+      top: "世宇乐园",
+      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
+      title: "英语早教班，坚持全英对话学习",
+      next: "7.词语性转化记忆技巧",
+      complete: "6.单词快速记忆",
+      isDone: true,
+      doneText: "宝宝好棒，完成了所有课程"
+    }],
 
       imageW : 0,
       useBtnClass:"use",
       unabelBtnClass: "",
       imgW:0,
       imgH:0,
-      isVip:true,
+      isVip:false,
       vipW:0,
       vipH:0,
       orderListTop:0,

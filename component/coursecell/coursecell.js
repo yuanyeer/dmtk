@@ -35,7 +35,10 @@ Component({
   methods: {
     // 课程点击
     _cellClickEvent:function(e) {
-      this.triggerEvent("courseClickEvent", { text: e })
+      // this.triggerEvent("courseClickEvent", { text: e })
+      wx.navigateTo({
+        url: '../../pages/courses/course_detail',
+      })
     } 
   }
 })

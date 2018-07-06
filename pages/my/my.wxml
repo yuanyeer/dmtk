@@ -3,6 +3,7 @@
   <label>Hinder</label>
   <view class='notification' bindtap='newClickEvent'>
     <image src='../../images/my/new.png'></image>
+    <label class='bot'>11</label>
   </view>
 </view>
 <view class='ad boxsize' bindtap='vipItemClickEvent'>

@@ -36,6 +36,6 @@ Component({
     // 订单点击
     _orderCellClickEvent: function (e) {
       this.triggerEvent("orderCellClickEvent", { text: e })
-    } 
+    }
   }
 })
