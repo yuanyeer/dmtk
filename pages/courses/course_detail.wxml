@@ -77,7 +77,7 @@
 <view class='bot-bar row-view'>
   <view class='tac col-btn fg-black'>
   <image src="../../images/course/collection.png"></image>收藏课程</view>
-  <view class='tac buy-btn bg-green'>
+  <view class='tac buy-btn bg-green' bindtap='buyNowClickEvent'>
     <image src="../../images/course/buynow.png"></image>
   立即购买</view>
 </view>

@@ -36,7 +36,7 @@
 <!--进度  -->
 <view class='progress boxsize'>
   <view class='title row-view fg-black boxsize'>课程进度
-    <view class='more-record fg-green'>详细记录 
+    <view class='more-record fg-green' bindtap='recordClickEvent'>详细记录 
       <image src="../../images/order/arrow.png"></image>
     </view>
   </view>

@@ -18,7 +18,10 @@
     "pages/store/store",
     "pages/search_resutl/search",
     "pages/news/new_detail",
-    "pages/kefu/kefu"
+    "pages/kefu/kefu",
+    "pages/courses/record",
+    "pages/buy/buy",
+    "pages/location/test"
   ],
   "window": {
     "backgroundTextStyle": "black",

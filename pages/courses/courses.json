@@ -2,5 +2,6 @@
   "navigationBarTitleText": "大麦天空",
   "usingComponents": {
     "courseList": "/component/coursecell/coursecell"
-  }
+  },
+  "enablePullDownRefresh": true
 }

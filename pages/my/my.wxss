@@ -30,7 +30,8 @@ page {
   display: flex;
   position: relative;
 }
-.ad image {
+
+.ad .leftImage {
   width: 50rpx;
   height: 49rpx;
   margin-left: 30rpx;
@@ -53,6 +54,35 @@ page {
 .vip-info .sub-title {
   margin-top: 10rpx;
   font-size: 22rpx;
+}
+.vip {
+  margin-left: 20rpx;
+  position: relative;
+  width: 50rpx;
+  height: 30rpx;
+  /* background-color: #abc; */
+
+}
+.vip .vip-bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.vip .vip-title {
+  display: inline-block;
+  width: 50rpx;
+  height: 30rpx;
+  text-align: center;
+  font-size: 22rpx;
+  line-height: 30rpx;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 /*右上角  */

@@ -1,5 +1,6 @@
 // pages/My/my.js
 const util = require('../../utils/appTool.js')
+const app = getApp()
 Page({
 
   /**
@@ -18,14 +19,17 @@ Page({
     }, {
         icon: "../../images/my/set.png",
         title: "设置", link: "src:ssss", idx : 0
-      }]
+      }],
+      isVip:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setData({
+      isVip: app.globalData.isVip
+    })
 
   },
   setCellClickEvent:function(e) {

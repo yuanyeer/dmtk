@@ -13,6 +13,11 @@
 >
 </courseList> 
 
+<view class='nothing tac col-view' style='margin-top:150rpx' wx:if="{{isNothing == true}}">
+  <image style='width:{{noW}}px;height:{{noH}}px' src="../../images/nothing.png"></image>
+  <label class='no-title'>搜不到你想要的，换一个关键词吧</label>
+</view>
+
 <!--门店列表  -->
 <view class='result' wx:if="{{showTable == 1}}">
   <view class='store-cell row-view boxsize' wx:for="{{storeArr}}" wx:key="id" bindtap='storeCellClickEvent'>

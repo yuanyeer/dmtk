@@ -3,6 +3,7 @@ const util = require('../../utils/appTool.js')
 
 const req = require('../../api/appFunc.js')
 const pro = require('../../utils/wxReq.js')
+const test = require('../../utils/test.js')
 
 Page({
 
@@ -27,24 +28,28 @@ Page({
     })
 
     //加载课程
-    wx.showLoading({
-      title: '正在加载',
-    })
+    // wx.showLoading({
+    //   title: '正在加载',
+    // })
     var self = this;
-    pro.Get(req.api.course).then(function(res){
-      wx.hideLoading()
-      self.setData({
-        recArr:res.data.datas
-      })
-    },function(err){
-      wx.hideLoading()
-      wx.showModal({
-        title: '错误',
-        content: '服务端错误',
-        showCancel: false, //不显示取消按钮
-        confirmText: '确定'
-      })
+    
+    self.setData({
+      recArr: test.course().datas
     })
+    // pro.Get(req.api.course).then(function(res){
+    //   wx.hideLoading()
+    //   self.setData({
+    //     recArr:res.data.datas
+    //   })
+    // },function(err){
+    //   wx.hideLoading()
+    //   wx.showModal({
+    //     title: '错误',
+    //     content: '服务端错误',
+    //     showCancel: false, //不显示取消按钮
+    //     confirmText: '确定'
+    //   })
+    // })
   },
   topItemClickEvent:function(e) {
     var selectId = e.target.dataset.itemid
@@ -99,7 +104,17 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    wx.showLoading({
+      title: '正在加载',
+    })
+
+    setTimeout(function () {
+      wx.hideLoading();
+      wx.showToast({
+        title: '加载完成',
+      })
+      wx.stopPullDownRefresh()
+    }, 1000)
   },
 
   /**

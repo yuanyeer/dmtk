@@ -91,6 +91,9 @@ Page({
     }],
     storeImgW:0,
     storeImgH: 0,
+    isNothing:false,
+    noW:0,
+    noH:0
   },
 
   /**
@@ -106,9 +109,15 @@ Page({
     var storeImgW = screenW * 0.37333;
     var storeImgH = storeImgW * 210 / 280;
 
+
+    var noW = screenW * 0.52133;
+    var noH = noW * 286 / 391;
+
     this.setData({
       storeImgW: storeImgW,
-      storeImgH: storeImgH
+      storeImgH: storeImgH,
+      noW: noW,
+      noH: noH
     })
   },
 
@@ -118,16 +127,21 @@ Page({
     if (searchInputText == "门店") {
 
       this.searchStoreEvent();
-
+      this.setData({
+        isNothing: false
+      })
     } else if (searchInputText == "课程") {
       
       this.searchCourseEvent()
-
+      this.setData({
+        isNothing: false
+      })
     }
 
     if (searchInputText.length == 0) {
       this.setData({
-        showTable:2
+        showTable:2,
+        isNothing:true
       })
     }
   },

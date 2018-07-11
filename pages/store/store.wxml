@@ -1,5 +1,5 @@
 <view class="store-top">
-  <view class='store-top-cell row-view boxsize fg-black' wx:for="{{topArr}}" wx:key="id">
+  <view class='store-top-cell row-view boxsize fg-black' wx:for="{{topArr}}" wx:key="id" bindtap='topItemClickEvent' data-action="{{item.action}}">
     <image class='left-icon' src='{{item.icon}}' wx:if="{{item.icon != null}}"></image>
     <label>{{item.title}}</label>
     <image class='arrow' src='../../images/store/arrow.png' wx:if="{{item.action != null}}"></image>
@@ -42,7 +42,7 @@
       </view>
     </view>
     <!--地图  -->
-    <map class='map-view' id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location
+    <map class='map-view' id="map" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markClickEvent" polyline="{{polyline}}" bindregionchange="regionchange" show-location
       style="width: 100%; height: 454rpx;"></map>
   </view>
 

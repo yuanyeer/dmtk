@@ -44,6 +44,13 @@ function wxGetSystemInfo() {
 }
 
 /**
+ * 底部弹出框
+ */
+function wxShowActionSheet() {
+  return wxPromisify(wx.showActionSheet)
+}
+
+/**
  * 保留当前页面，跳转到应用内的某个页面
  * url:'../index/index'
  * params:{key:value1}
@@ -62,5 +69,6 @@ module.exports = {
   wxPromisify: wxPromisify,
   wxLogin: wxLogin,
   wxGetUserInfo: wxGetUserInfo,
-  wxGetSystemInfo: wxGetSystemInfo
+  wxGetSystemInfo: wxGetSystemInfo,
+  wxShowActionSheet: wxShowActionSheet
 }

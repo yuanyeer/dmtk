@@ -1,0 +1,36 @@
+<!--顶部  -->
+<view class='top paddingLR row-view'>
+<view class='image-view'>
+     <view class='tag bg-green tac'>共10课时</view>
+  <image style="width:{{imgW}}px;height:{{imgH}}px" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg"></image>
+
+</view>
+ 
+  <view class='info col-view'>
+    <label class='title fg-black'>英语初识游乐版，坚持全英教学</label>
+    <label class='price fg-orange'>￥112325</label>
+  </view>
+</view>
+
+
+<!--中间内容  -->
+<view class='content paddingLR'>
+  <view class='cell row-view' wx:for="{{orderInfo.infos}}" wx:key="id">
+    <label class='cell-title'>{{item.title}}</label>
+
+    <view class='cell-content'>{{item.value}}
+      <label class='ds' wx:if="{{item.isSpe == true}}">剩余时间14分58秒</label>
+    </view>
+  </view>
+
+</view>
+
+
+<!--底部按钮  -->
+<!--购买栏  -->
+<view class='bot-bar row-view'>
+  <view class='tac col-btn fg-black'>
+  取消订单</view>
+  <view class='tac buy-btn bg-green' bindtap='buyNowClickEvent'>
+  去支付</view>
+</view>

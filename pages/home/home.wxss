@@ -198,18 +198,19 @@ page {
   position: absolute;
   top: 20rpx;
   left: 20rpx;
-  width: 68rpx;
+  width: 78rpx;
   height:54rpx;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  padding: 6rpx 10rpx 6rpx;
+  padding: 4rpx 8rpx 4rpx;
   padding-left: 20rpx;
   border-radius: 30rpx;
 }
 .location-view image{
-  width: 40%;
-  height: 40%;
+  width: 16rpx;
+  height: 16rpx;
   margin-top: 10rpx;
+  margin-left: 2rpx;
 }
 .location-view label {
   color: #fff;
@@ -231,4 +232,19 @@ page {
 .scan-view image {
   width: 30rpx;
   height: 30rpx;
+}
+
+/*底部  */
+
+.bottom {
+  height: 100rpx;
+}
+.bottom image{
+  width: 8rpx;
+  height: 16rpx;
+}
+.bottom .desc {
+  font-size: 22rpx;
+  color: #999999;
+  margin: 0rpx 10rpx;
 }

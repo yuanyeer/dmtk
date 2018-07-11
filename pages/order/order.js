@@ -1,4 +1,5 @@
 const util = require('../../utils/appTool.js')
+const app = getApp()
 Page({
 
   /**
@@ -178,6 +179,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      isVip: app.globalData.isVip
+    })
     var screenW = util.getScrW();
 
     var imgW = screenW * 0.44;
@@ -192,13 +196,14 @@ Page({
     if(this.data.isVip) {
       orderListTop = vipH+180;
     }
-
+    
     this.setData({
       imgW: imgW,
       imgH: imgH,
       vipW: vipW,
       vipH: vipH,
-      orderListTop: orderListTop
+      orderListTop: orderListTop,
+      
     })
     
   },
@@ -241,7 +246,17 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    wx.showLoading({
+      title: '正在加载',
+    })
+
+    setTimeout(function(){
+      wx.hideLoading();
+      wx.showToast({
+        title: '加载完成',
+      })
+      wx.stopPullDownRefresh()
+    },1000)
   },
 
   /**

@@ -3,6 +3,10 @@
 const util = require('../../utils/appTool.js')
 const pro = require('../../utils/wxReq.js')
 const req = require('../../api/appFunc.js')
+const test = require('../../utils/test.js')
+
+var map = require('../../utils/amap-wx.js');
+
 const App = getApp()
 
 Page({
@@ -36,7 +40,8 @@ Page({
 
     //小点动画
     dotsAnimation: '',
-    star: 5
+    star: 5,
+    cityName:""
   },
 
   /**
@@ -71,54 +76,94 @@ Page({
     
     this.initData();
 
-
-
+    this.initMap();
+  },
+  //加载地图
+  initMap:function() {
+    var self = this;
+    var myMap = new map.AMapWX({ key: 'a6c1434c336f8d2e33cb26ff6c7142cf' });
+    myMap.getRegeo({
+      success: function (data) {
+        //成功回调
+        console.log('获取当前位置成功')
+        var cityName = data[0].regeocodeData.addressComponent.city;
+        cityName = cityName.split("市").join("");
+        self.setData({
+          cityName: cityName
+        })
+      },
+      fail: function (info) {
+        //失败回调
+        console.log('获取当前位置失败')
+        console.log(info)
+      }
+    })
   },
   //加载数据
   initData: function(e) {
-    wx.showLoading({
-      title: '正在加载',
-    })
-    //轮播图
-    var self = this
-    pro.Get(req.api.swiper).then(res => {
-      self.setData({
-        itemArr: res.data.datas
-      })
-      return pro.Get(req.api.midfun);
-    }, err => {
-      console.log(err)
-      return pro.Get(req.api.midfun);
-    })
-    //中间按钮
-    .then(res => {
-      self.setData({
-        functionArr: res.data.datas
-      })
-      return pro.Get(req.api.course);
-    }, err => {
-      console.log(err)
-      return pro.Get(req.api.course);
-    })
-    //课程
-    .then(res => {
-      wx.hideLoading()
-      self.setData({
-        recArr: res.data.datas
-      })
-      wx.stopPullDownRefresh()
-    }, err => {
-      console.log(err)
-      wx.hideLoading()
-      wx.showModal({
-        title: '提示',
-        content: App.globalData.errText,
-        showCancel: false
-      })
-      wx.stopPullDownRefresh()
-    })
+    this.testData();
+    // wx.showLoading({
+    //   title: '正在加载',
+    // })
+    // //轮播图
+    // var self = this
+    // pro.Get(req.api.swiper).then(res => {
+    //   self.setData({
+    //     itemArr: res.data.datas
+    //   })
+    //   return pro.Get(req.api.midfun);
+    // }, err => {
+    //   console.log(err)
+      
+    //   return pro.Get(req.api.midfun);
+    // })
+    // //中间按钮
+    // .then(res => {
+    //   self.setData({
+    //     functionArr: res.data.datas
+    //   })
+    //   return pro.Get(req.api.course);
+    // }, err => {
+      
+    //   console.log(err)
+    //   return pro.Get(req.api.course);
+    // })
+    // //课程
+    // .then(res => {
+    //   wx.hideLoading()
+    //   self.setData({
+    //     recArr: res.data.datas
+    //   })
+    //   wx.stopPullDownRefresh()
+    // }, err => {
+      
+    //   console.log(err)
+    //   wx.hideLoading()
+    //   wx.showModal({
+    //     title: '提示',
+    //     content: App.globalData.errText,
+    //     showCancel: false
+    //   })
+    //   wx.stopPullDownRefresh()
+    //   self.testData();
+    // })
   },
+  //填上测试数据
+  testData:function(){
+    this.setData({
+        itemArr: test.swiper().datas
+    })
 
+    this.setData({
+      functionArr: test.midfun().datas
+    })
+
+    this.setData({
+      recArr: test.course().datas
+    })
+
+    wx.stopPullDownRefresh()
+  },
   //轮播图改变
   onSlideChangeEnd: function(e) {
     var index = e.detail.current;
@@ -126,6 +171,18 @@ Page({
       swiperCurrent: index
     })
 
+  },
+  //更多课程
+  moreCourseClickEvent:function() {
+    wx.navigateTo({
+      url: '../courses/courses',
+    })
+  },
+  //热门课程点击
+  hotClickEvent:function() {
+    wx.navigateTo({
+      url: '../courses/course_detail',
+    })
   },
   //搜索栏点击
   searchClickEvent: function(e) {

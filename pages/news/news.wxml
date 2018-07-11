@@ -4,7 +4,7 @@
       <view class='cell-content col-view'>
         <label class='title fg-black'>{{item.title}}</label>
         <text class="fg-lightGray">{{item.text}}</text>
-        <image src='{{item.listImgUrl}}' wx:if="{{item.listImgUrl != null && item.listImgUrl.length > 0}}"></image>
+        <image mode='aspectFit' src='{{item.listImgUrl}}' wx:if="{{item.listImgUrl != null && item.listImgUrl.length > 0}}"></image>
       </view>
   </view>
 </view>

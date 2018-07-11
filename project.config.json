@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -138,6 +138,24 @@
 					"id": -1,
 					"name": "客服",
 					"pathName": "pages/kefu/kefu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课程消费记录",
+					"pathName": "pages/courses/record",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "待支付",
+					"pathName": "pages/buy/buy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地图测试页面",
+					"pathName": "pages/location/test",
 					"query": ""
 				}
 			]

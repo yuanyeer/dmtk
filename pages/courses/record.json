@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "详细记录",
+  "usingComponents": {
+    "recordList": "/component/record/record"
+  }
+  ,"enablePullDownRefresh": true
+}

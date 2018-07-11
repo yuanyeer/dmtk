@@ -20,4 +20,5 @@ page {
 .new-content images {
   margin-top: 30rpx;
   margin-bottom: 40rpx;
+  height: 100%;
 }

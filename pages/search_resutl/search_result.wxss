@@ -9,6 +9,12 @@ page {
   justify-content: center;
   margin-top: 10rpx;
 }
+/*nothing  */
+.no-title {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: lightgray;
+}
 
 /*门店cell  */
 .store-cell {

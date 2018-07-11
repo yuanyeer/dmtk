@@ -38,7 +38,8 @@ App({
     userInfo: null,
     proUrl:"",//正式环境URL
     debugUrl:"http://10.1.70.68:8080/",//调试环境URL
-    errText:"服务端错误"
+    errText:"服务端错误",
+    isVip:true
   },
   wux: (scope) => new wux(scope)
 })

@@ -1,8 +1,30 @@
-<input placeholder="请输入手机号码" class='phone-input' confirm-type="确定" focus='true'
-  bindinput="textinputEvent"
-  bindconfirm="textinputConfirmEvent"
-></input>
+<!--logo  -->
+<view class='top-view tac'>
+  <image class='logo' src='../../images/logo.png'></image>
+</view>
+<!--手机号码  -->
+<view class='input-view row-view'>
+
+  <view class='area fg-gray tac'>+86</view>
+
+  <input placeholder="请输入手机号码" class='phone-input fg-black' confirm-type="确定" focus='true' bindinput="textinputEvent" bindconfirm="textinputConfirmEvent" maxlength='11' focus='false' bindconfirm="phoneInputComfirEvent"></input>
+
+
+  <view class='send-btn bg-green tac' bindtap='sendCodeEvent'>发送</view>
+
+</view>
+
+
+<!--验证码  -->
+<view class='verify row-view'>
+    <view class='verify-input' wx:for="{{verifys}}" bindtap='verifyItemClickEvent' wx:key="id" data-tag="{{item.tag}}">{{item.value}}</view> 
+</view>
+
+<view class='tip fg-gray'>输入验证码</view>
+
+<input class='hidden-input' focus="{{hidden_focus}}" bindinput='hiddenInputEvent' maxlength='4' type="number"></input>
 
 
 
-<button class='confirm-btn'>绑定</button>
+
+<view class="confirm-btn bg-green tac {{isSuccess == true ? '':'enable-btn'}}">完成</view>

@@ -17,7 +17,7 @@
 </view>
 <!--定位  -->
 <view class='location-view tac' bindtap='locationClickEvent'>
-  <label>中山</label>
+  <label>{{cityName}}</label>
    <image src='../../images/down.png'></image> 
 </view>
   <swiper current='{{swiperCurrent}}' autoplay="false" duration="250" style="height:{{swiperHeight}}px" bindchange='onSlideChangeEnd'>
@@ -59,7 +59,7 @@
 <view class='recommend'>
   <view class='rec-top boxsize' style='padding:0rpx {{contentPadding}}px 0rpx;'>
     <label class='rec-title'>推荐课程</label>
-    <view class='rec-more'>更多
+    <view class='rec-more' bindtap='moreCourseClickEvent'>更多
       <image src="../../images/home/arrow.png"></image>
     </view>
   </view>
@@ -78,13 +78,13 @@
 <!--热门课程  -->
 <view class='hot boxsize' style='padding:0px {{contentPadding}}px 10px;'>
  <view class='rec-top boxsize'>
-    <label class='rec-title'>推荐课程</label>
-    <view class='rec-more'>更多
+    <label class='rec-title'>热门课程</label>
+    <view class='rec-more' bindtap='moreCourseClickEvent'>更多
       <image src="../../images/home/arrow.png"></image>
     </view>
   </view>
 
-  <view class='hot-content col-view'>
+  <view class='hot-content col-view' bindtap='hotClickEvent'>
     <!--课时  -->
     <view class='cls-time tac'>课时</view>
     <image src='{{hot.url}}' style='width:100%'></image>
@@ -100,5 +100,15 @@
       <label class='hot-comment'>{{hot.comments}}条评论</label>
     </view>
   </view>
+</view>
+
+<!--底部  -->
+<view class='bottom row-view tac'>
+  <image src='../../images/xie.png'></image>
+  <image src='../../images/xie.png'></image>
+  <label class='desc'>已经到底咯</label>
+  <image src='../../images/xie.png'></image>
+  <image src='../../images/xie.png'></image>
+
 </view>
 

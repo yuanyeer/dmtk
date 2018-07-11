@@ -7,10 +7,14 @@
   </view>
 </view>
 <view class='ad boxsize' bindtap='vipItemClickEvent'>
-  <image src='../../images/my/vip-icon.png'></image>
+  <image class='leftImage' src='../../images/my/vip-icon.png'></image>
   <view class='vip-info col-view'>
     <label class='title'>成为VIP,让游乐再无后顾之忧</label>
     <label class='sub-title'>全站海量课程无限玩</label>
+  </view>
+  <view class='vip tac' wx:if="{{isVip}}">
+    <image class='vip-bgImage' src='../../images/vip/small-bg.png'></image>  
+    <label class='vip-title'>VIP</label> 
   </view>
 
   <image class='vip-arrow' src='../../images/my/arrow.png'></image>

@@ -2,5 +2,6 @@
   "navigationBarTitleText": "订单",
   "usingComponents": {
     "orderList": "/component/ordercell/ordercell"
-  }
+  },
+  "enablePullDownRefresh": true
 }

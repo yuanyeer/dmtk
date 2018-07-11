@@ -1,0 +1,6 @@
+<view class="map_container">
+  <!--定义页面结构，可以使用地图组件也能使用其他组件 -->
+  <map class='map-content' latitude="{{markers[0].latitude}}" longitude="{{markers[0].longitude}}" markers='{{markers}}'
+    bindmarkertap='markClickEvent'
+  ></map>
+</view>
