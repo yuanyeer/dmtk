@@ -1,50 +1,46 @@
 .container {
-  
+  padding: 30rpx;
+  background-color: #FCFCFC;
 }
 .cell {
-  padding:20rpx 30rpx 40rpx;
+  background-color: white;
+  padding:20rpx 30rpx 20rpx;
   border-bottom: 2rpx solid #F0F0F0;
-
+  margin-bottom: 30rpx;
+  border-radius: 10rpx;
+    box-shadow: 0rpx 0rpx 100rpx 10rpx #F0F0F0;  
 }
 .top {
-  font-size: 24rpx;
+  font-size: 30rpx;
   margin-bottom: 20rpx;
+  font-weight: 700;
+
 }
 .content {
 
 }
-
-.info {
-  width: 50%;
-  margin-left: 20rpx;
-  justify-content: space-around;
-}
-.title {
-  font-size: 28rpx;
-  line-height: 40rpx;
-}
 .tag {
-  color: #fff;
+  color: white;
   font-size: 18rpx;
-  padding: 5rpx 10rpx 5rpx;
-  border-radius: 8rpx;
+  border-radius: 10rpx;
+  padding: 6rpx 10rpx 6rpx;
+  margin-left: 5rpx;
+  margin-top: -6rpx;
 }
-.store {
-  font-size: 24rpx;
+
+.item {
+  width: 100%;
+  margin:10rpx 0 10rpx;
+  /* background-color: lawngreen; */
   align-items: center;
 }
-.icon {
-  background-color: antiquewhite;
-  width: 50rpx;
-  height: 50rpx;
-  margin-right: 10rpx;
-  border-radius: 50%;
+.title {
+  font-size: 26rpx;
+  color: #666666;
 }
-.time {
-  font-size: 20rpx;
-}
-.cell .cls-img {
-  border-radius: 20rpx;
+.value {
+  font-size: 26rpx;
+   margin-left: 30rpx; 
 }
 
 .boxsize {

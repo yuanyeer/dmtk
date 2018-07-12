@@ -1,5 +1,6 @@
 // pages/courses/course_detail.js
 const util = require('../../utils/appTool.js')
+const App = getApp();
 Page({
 
   /**
@@ -139,15 +140,11 @@ Page({
   },
   // 门店点击事件
   storeCellClickEvent:function() {
-    wx.navigateTo({
-      url: '../store/store',
-    })
+    App.data.router.go('store')
   },
   //立即购买
   buyNowClickEvent:function(e){
-    wx.navigateTo({
-      url: '../buy/buy',
-    })
+    App.data.router.go('buy')
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

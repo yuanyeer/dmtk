@@ -1,4 +1,5 @@
 // pages/login/bind.js
+const App = getApp();
 Page({
 
   /**

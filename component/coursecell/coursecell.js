@@ -1,4 +1,5 @@
 // component/coursecell/coursecell.js
+const App = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -36,9 +37,8 @@ Component({
     // 课程点击
     _cellClickEvent:function(e) {
       // this.triggerEvent("courseClickEvent", { text: e })
-      wx.navigateTo({
-        url: '../../pages/courses/course_detail',
-      })
+      App.data.router.go('course_detail',{name:'tony',age:20})
+
     } 
   }
 })

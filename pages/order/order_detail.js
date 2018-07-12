@@ -1,5 +1,6 @@
 // pages/order/order_detail.js
 const util = require('../../utils/appTool.js')
+const App = getApp();
 Page({
 
   /**
@@ -122,9 +123,7 @@ Page({
   },
   //订单详细记录
   recordClickEvent:function(e){
-    wx.navigateTo({
-      url: '../courses/record',
-    })
+    App.data.router.go('record')
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -32,6 +32,10 @@ page {
   color:#69BE7A;
 }
 /*顶部vip  */
+.vip-container {
+  margin: 30rpx 0rpx 40rpx;
+  width: 100%;
+}
 .vip-shadow {
   position: absolute;
   top: 80rpx;
@@ -39,10 +43,10 @@ page {
    z-index: 1; 
 }
 .vip-view {
-  margin-top: 30rpx;
+  margin: 0 auto;
   padding: 20rpx;
-  position: absolute;
-  z-index: 1;
+  position: relative;
+  /* z-index: 1; */
   justify-content: space-between;
 }
 .vip-bg {

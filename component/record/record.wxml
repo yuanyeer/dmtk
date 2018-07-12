@@ -1,19 +1,15 @@
-<view class='container' style="margin-top:{{marginTop}}rpx">
+<view class='container boxsize' style="margin-top:{{marginTop}}rpx">
   <view class='cell boxsize col-view' wx:for="{{dataArr}}" wx:key="id">
-    <view class='top fg-gray'>
-      订单号:{{item.orderId}}
+    <view class='top fg-black'>
+      {{item.title}}
+      <label class='tag bg-green'>第五课时</label>
     </view>
-    <view class='content row-view'>
-      <image class='cls-img' style="width:{{imgW}}px;height:{{imgH}}px" src='{{item.image}}'></image>
-      <view class='info col-view'>
-        <view class='title'> {{item.title}}
-        <label class='tag bg-green'>{{item.tag}}</label>
-        </view>
-        <view class='store fg-black row-view'>
-          <view class='icon'></view>
-         {{item.store}}</view>
-        <view class='time fg-gray'>{{item.date}}</view>
-      </view>
+    <view class='item row-view'>
+      <label class='title'>门店</label>
+      <label class='value fg-black'>{{item.store}}</label>
     </view>
+    <view class='item row-view'> <label class='title'>时间</label><label class='value fg-black'>{{item.date}}</label></view>
+    <view class='item row-view'> <label class='title'>单号</label><label class='value fg-black'>{{item.orderId}}</label></view>
+    <view class='item row-view'> <label class='title'>状态</label><label class='value fg-orange'>{{item.stateText}}</label></view>
   </view>
 </view>

@@ -1,6 +1,6 @@
 var app = getApp();
 
-const baseUrl = app.globalData.debugUrl;
+const baseUrl = app.data.debugUrl;
 
 var api = {
   getModel1: baseUrl  + "1",

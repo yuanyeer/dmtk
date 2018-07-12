@@ -11,6 +11,10 @@ Page({
     orderInfo:{
       infos: [{ title: "课程名称", value:"英语初识游乐版，坚持全英教学"},
         { title: "订单状态", value: "待支付",isSpe:true}, { title: "订单编号", value: "4546131156484123123145" }, { title: "下单时间", value: "2018/09/26 09:55" }]
+    },
+    currentTime:{
+      min:15,
+      sec:60
     }
   },
 
@@ -29,6 +33,8 @@ Page({
     })
   },
 
+  //减时间
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

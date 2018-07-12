@@ -1,6 +1,6 @@
 // pages/My/my.js
 const util = require('../../utils/appTool.js')
-const app = getApp()
+const App = getApp()
 Page({
 
   /**
@@ -28,7 +28,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      isVip: app.globalData.isVip
+      isVip: App.data.isVip
     })
 
   },
@@ -39,14 +39,11 @@ Page({
     })
   },
   vipItemClickEvent:function(e){
-    wx.navigateTo({
-      url: '../vip/vip',
-    })
+    App.data.router.go('vip')
   },
   newClickEvent:function(e){
-    wx.navigateTo({
-      url: '../news/news',
-    })
+    App.data.router.go('news')
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

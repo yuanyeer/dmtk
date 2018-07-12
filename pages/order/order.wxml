@@ -5,21 +5,28 @@
   </view>
 </view>
 <!--vip 阴影  -->
-  <image wx:if="{{isVip == true}}" class='vip-shadow' src="../../images/order/vip-shadow.png" style="width:{{vipW }}px;height:{{vipH * 1.5}}px;"></image>  
+
 <!--vip 卡  -->
- <view class='vip-view col-view boxsize' wx:if="{{isVip == true}}" style="width:{{vipW}}px;height:{{vipH}}px;left:50%;margin-left:-{{vipW*0.5}}px">
-  <image class='vip-bg' src="../../images/order/vip-bg.png" style="width:{{vipW}}px;height:{{vipH}}px;"></image>
-  <view class='vip-top row-view'>
-    <view class='icon'></view>
-    <label class='name'>zizi</label>
-    <image src="../../images/order/vip-icon.png"></image>
-    <view class='vip-type'>大麦天空年费会员</view>
+
+<view class='vip-container' wx:if="{{isVip == true}}">
+   <image  class='vip-shadow' src="../../images/order/vip-shadow.png" style="width:{{vipW }}px;height:{{vipH * 1.5}}px;"></image>   
+  <view class='vip-view col-view boxsize' wx:if="{{isVip == true}}" style="width:{{vipW}}px;height:{{vipH}}px;">
+    <image class='vip-bg' src="../../images/order/vip-bg.png" style="width:{{vipW}}px;height:{{vipH}}px;"></image>
+    <view class='vip-top row-view'>
+      <view class='icon'></view>
+      <label class='name'>zizi</label>
+      <image src="../../images/order/vip-icon.png"></image>
+      <view class='vip-type'>大麦天空年费会员</view>
+    </view>
+    <view class='vip-bottom row-view'>
+      <label class='vip-desc'>全站海量课程无限玩</label>
+      <label class='vip-date'>有效期至2018-08-08</label>
+    </view>
   </view>
-  <view class='vip-bottom row-view'>
-    <label class='vip-desc'>全站海量课程无限玩</label>
-    <label class='vip-date'>有效期至2018-08-08</label>
-  </view>
-</view> 
+
+
+</view>
+
 
 <orderList orderArr="{{orderArr}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent" wx:if="{{curPage == 0}}"></orderList>
 

@@ -3,7 +3,6 @@
   orderArr="{{orderArr}}"
   imgH='{{imgH}}'
   imgW='{{imgW}}'
-  bind:orderCellClickEvent="orderCellClickEvent"
 ></orderList>
 </view>
 

@@ -1,4 +1,5 @@
 // pages/news/news.js
+const App = getApp();
 Page({
 
   /**
@@ -41,9 +42,7 @@ Page({
 
   //新闻点击
   newsClickEvent:function(e){
-    wx.navigateTo({
-      url: 'new_detail',
-    })
+    App.data.router.go('new_detail')
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

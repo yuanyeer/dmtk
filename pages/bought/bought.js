@@ -1,5 +1,6 @@
 // pages/bought/bought.js
 const util = require('../../utils/appTool.js')
+const App = getApp();
 Page({
 
   /**
@@ -52,13 +53,6 @@ Page({
     this.setData({
       imgW: imgW,
       imgH: imgH
-    })
-  },
-  //订单点击
-  orderCellClickEvent:function(e) {
-    console.log(e)
-    wx.navigateTo({
-      url: '../order/order_detail',
     })
   },
   /**

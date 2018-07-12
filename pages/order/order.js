@@ -1,5 +1,5 @@
 const util = require('../../utils/appTool.js')
-const app = getApp()
+const App = getApp()
 Page({
 
   /**
@@ -180,7 +180,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      isVip: app.globalData.isVip
+      isVip: App.data.isVip
     })
     var screenW = util.getScrW();
 
@@ -194,7 +194,7 @@ Page({
 
     var orderListTop = 20;
     if(this.data.isVip) {
-      orderListTop = vipH+180;
+      orderListTop = 30;
     }
     
     this.setData({
@@ -206,13 +206,6 @@ Page({
       
     })
     
-  },
-  //订单点击
-  orderCellClickEvent:function(e){
-    console.log(e)
-    wx.navigateTo({
-      url: 'order_detail',
-    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

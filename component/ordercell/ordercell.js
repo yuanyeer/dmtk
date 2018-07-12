@@ -1,4 +1,5 @@
 // component/ordercell/ordercell.js
+const App = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -35,7 +36,8 @@ Component({
   methods: {
     // 订单点击
     _orderCellClickEvent: function (e) {
-      this.triggerEvent("orderCellClickEvent", { text: e })
+      // this.triggerEvent("orderCellClickEvent", { text: e })
+      App.data.router.go('order_detail')
     }
   }
 })

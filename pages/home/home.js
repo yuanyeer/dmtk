@@ -174,45 +174,31 @@ Page({
   },
   //更多课程
   moreCourseClickEvent:function() {
-    wx.navigateTo({
-      url: '../courses/courses',
-    })
+    App.data.router.go('courses')
   },
   //热门课程点击
   hotClickEvent:function() {
-    wx.navigateTo({
-      url: '../courses/course_detail',
-    })
+    App.data.router.go('courses')
   },
   //搜索栏点击
   searchClickEvent: function(e) {
-    wx.navigateTo({
-      url: '../search_resutl/search_result',
-    })
+    App.data.router.go('search_result')
   },
   // 中间功能按钮点击
   functionBtnClickEvent: function(e) {
-    wx.navigateTo({
-      url: '../courses/courses',
-    })
+    App.data.router.go('courses')
   },
   // 课程点击
   courseClickEvent: function() {
-    wx.navigateTo({
-      url: '../courses/course_detail',
-    })
+    App.data.router.go('course_detail')
   },
   // 扫码
   scanClickEvent: function() {
-    wx.navigateTo({
-      url: '../scan/scan',
-    })
+    App.data.router.go('scan')
   },
   // 定位点击
   locationClickEvent: function() {
-    wx.navigateTo({
-      url: '../location/location',
-    })
+    App.data.router.go('location')
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
