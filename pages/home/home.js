@@ -4,7 +4,6 @@ const util = require('../../utils/appTool.js')
 const pro = require('../../utils/wxReq.js')
 const req = require('../../api/appFunc.js')
 const test = require('../../utils/test.js')
-
 var map = require('../../utils/amap-wx.js');
 
 const App = getApp()
@@ -20,8 +19,6 @@ Page({
     swiperHeight: 175,
     functionArr: [],
     recArr: [],
-    contentPadding: 15,
-    contentItemW: 0,
     hot: {
       url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
       title: "益智手绘游戏，提升孩子美感认知和绘画能力",
@@ -33,15 +30,14 @@ Page({
     botImageW: 0,
     swiperCurrent: 0,
     currentIndex: 0,
-
     //搜索框宽高
     searchBarWidth: 0,
     searchBarHeight: 0,
-
     //小点动画
     dotsAnimation: '',
     star: 5,
-    cityName:""
+    cityName:"",
+    ui_setting:{}
   },
 
   /**
@@ -49,10 +45,6 @@ Page({
    */
   onLoad: function(options) {
     var screenW = util.getScrW();
-    var contentItemW = (screenW - this.data.contentPadding * 3) * 0.5;
-    this.setData({
-      contentItemW: contentItemW
-    })
 
     this.$wuxToast = App.wux(this).$wuxToast
 
@@ -61,8 +53,6 @@ Page({
     this.setData({
       botImageW: botImageW
     })
-
-
 
     //搜索框宽高
     var searchBarW = screenW * 0.8;
@@ -77,6 +67,8 @@ Page({
     this.initData();
 
     this.initMap();
+
+ 
   },
   //加载地图
   initMap:function() {

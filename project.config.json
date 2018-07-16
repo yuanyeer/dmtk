@@ -157,6 +157,18 @@
 					"name": "地图测试页面",
 					"pathName": "pages/location/test",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录界面",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "推广",
+					"pathName": "pages/home/ad",
+					"query": "link=https://www.baidu.com"
 				}
 			]
 		}

@@ -4,7 +4,7 @@
       <view class='order-content boxsize row-view'>
         <view class='float-class bg-green tac boxsize'>共18课时
         </view>
-        <image src="{{item.url}}" style="height:{{imgH}}px;width:{{imgW}}px"></image>
+        <image src="{{item.url}}" style="height:{{ui_setting.image_height}}px;width:{{ui_setting.image_width}}px"></image>
         <view class='order-detail col-view boxsize'>
           <view class='order-title'>{{item.title}}
           <label class='down-tag border-green fg-green' wx:if="{{item.isDone == true}}">完结</label>

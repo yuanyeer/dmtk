@@ -2,6 +2,8 @@
 const util = require('../../utils/appTool.js')
 var map = require('../../utils/amap-wx.js');
 var wxApi = require('../../utils/wxApi.js')
+const test = require('../../utils/test.js')
+const App = getApp();
 Page({
 
   /**
@@ -31,44 +33,7 @@ Page({
       isSel: false
     }],
     curPage: 0,
-    recArr: [{
-      tag: "莫莉幻想",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      price: 11200,
-      count: 9
-    }, {
-      tag: "莫莉幻想",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      price: 11200,
-      count: 9
-    }, {
-      tag: "莫莉幻想",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      price: 11200,
-      count: 9
-    }, {
-      tag: "莫莉幻想",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      price: 11200,
-      count: 9
-    }, {
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      price: 11200,
-      count: 9
-    }, {
-      tag: "其他",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      price: 11200,
-      count: 9
-    }],
-    contentPadding: 15,
-    contentItemW: 0,
+    recArr:[],
     storeImages: ["https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg", "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg"],
     teachers: [{
       img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530519610837&di=b267a3d6bec99ffbf8174edf4682e09f&imgtype=0&src=http%3A%2F%2Fdingyue.nosdn.127.net%2FWy21lC3adxyak8pACkQk2pax3QOSIVFuaxENCn1Dgm%3Dj31516946208758compressflag.jpg",
@@ -125,24 +90,18 @@ Page({
     route: {
       distance: 0
     },
-    myMap: {}
-
+    myMap: {},
+    ui_setting:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var screenW = util.getScrW();
-    var contentItemW = (screenW - this.data.contentPadding * 3) * 0.5;
+    
     this.setData({
-      contentItemW: contentItemW
-    })
-    var storeImgW = screenW * 0.373333;
-    var storeImgH = storeImgW * 210 / 280;
-    this.setData({
-      storeImgW: storeImgW,
-      storeImgH: storeImgH
+        ui_setting:App.data.ui.store,
+        recArr:test.course().datas
     })
 
     this.initMap();

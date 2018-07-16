@@ -1,8 +1,2 @@
  <!--课程列表  -->
-  <courseList
-    contentPadding='{{contentPadding}}'
-    contentItemW='{{contentItemW}}'
-    recArr='{{recArr}}'
-  >
-
-  </courseList>
+  <courseList  recArr='{{recArr}}'></courseList>

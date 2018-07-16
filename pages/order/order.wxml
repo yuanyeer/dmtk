@@ -8,10 +8,10 @@
 
 <!--vip 卡  -->
 
-<view class='vip-container' wx:if="{{isVip == true}}">
-   <image  class='vip-shadow' src="../../images/order/vip-shadow.png" style="width:{{vipW }}px;height:{{vipH * 1.5}}px;"></image>   
-  <view class='vip-view col-view boxsize' wx:if="{{isVip == true}}" style="width:{{vipW}}px;height:{{vipH}}px;">
-    <image class='vip-bg' src="../../images/order/vip-bg.png" style="width:{{vipW}}px;height:{{vipH}}px;"></image>
+<view class='vip-container' wx:if="{{isVip == true}}" bindtap='vipClickEvent'>
+   <image  class='vip-shadow' src="../../images/order/vip-shadow.png" style="width:{{ui_setting.vipCard_width}}px;height:{{ui_setting.vipCard_height * 1.5}}px;"></image>   
+  <view class='vip-view col-view boxsize' wx:if="{{isVip == true}}" style="width:{{ui_setting.vipCard_width}}px;height:{{ui_setting.vipCard_height}}px;">
+    <image class='vip-bg' src="../../images/order/vip-bg.png" style="width:100%;height:100%;"></image>
     <view class='vip-top row-view'>
       <view class='icon'></view>
       <label class='name'>zizi</label>
@@ -28,6 +28,6 @@
 </view>
 
 
-<orderList orderArr="{{orderArr}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent" wx:if="{{curPage == 0}}"></orderList>
+<orderList orderArr="{{orders}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent" wx:if="{{curPage == 0}}"></orderList>
 
 <orderList orderArr="{{enableOrders}}" marginTop="{{orderListTop}}" imgH='{{imgH}}' imgW='{{imgW}}' bind:orderCellClickEvent="orderCellClickEvent" wx:if="{{curPage == 1}}"></orderList>

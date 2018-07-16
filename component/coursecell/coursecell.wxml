@@ -1,7 +1,8 @@
  <!--课程列表 一行两个  -->
- <view class='rec-content row-view boxsize' style='padding:0px {{contentPadding}}px 0px;margin-top:{{marginTop}}px'>
+ <view class='rec-content row-view boxsize' style='padding:0px {{ui_setting.coursePadding}}px 0px;margin-top:{{marginTop}}px'>
+
     <view wx:for="{{recArr}}" wx:key="id">
-      <view class='rec-content-item col-view' style="background-color:{{item.color}};width:{{contentItemW}}px;" bindtap='_cellClickEvent' data-id="{{item.id}}">
+      <view class='rec-content-item col-view' style="background-color:{{item.color}};width:{{ui_setting.width}}px;" bindtap='_cellClickEvent' data-id="{{item.id}}">
         <image src='{{item.url}}'></image>
         
         <view class='title-view row-view'>

@@ -1,6 +1,8 @@
 <view class="top tac col-view bg-green" >
-  <view class='user-icon'></view>
-  <label>Hinder</label>
+   <view class='user-icon' wx:if="{{hasUserInfo == false}}"></view> 
+   <label wx:if="{{hasUserInfo == false}}">点击授权登录</label>
+  <image class='user-icon' src='{{userInfo.avatarUrl}}'></image>
+  <label>{{userInfo.nickName}}</label>
   <view class='notification' bindtap='newClickEvent'>
     <image src='../../images/my/new.png'></image>
     <label class='bot'>11</label>
@@ -20,6 +22,8 @@
   <image class='vip-arrow' src='../../images/my/arrow.png'></image>
 </view>
 
-<setcell dataArr="{{dataArr}}" cellHeight="56"
+<setcell dataArr="{{dataArr}}"
   bind:setCellClickEvent="setCellClickEvent"
 ></setcell>
+
+<button class='testbtn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>

@@ -19,7 +19,7 @@
     <label class='cell-title'>{{item.title}}</label>
 
     <view class='cell-content'>{{item.value}}
-      <label class='ds' wx:if="{{item.isSpe == true}}">剩余时间14分58秒</label>
+      <label class='ds' wx:if="{{item.isSpe == true}}">剩余时间{{currentTime.min}}分{{currentTime.sec}}秒</label>
     </view>
   </view>
 
@@ -31,6 +31,6 @@
 <view class='bot-bar row-view'>
   <view class='tac col-btn fg-black'>
   取消订单</view>
-  <view class='tac buy-btn bg-green' bindtap='buyNowClickEvent'>
+  <view class="tac buy-btn bg-green {{currentTime.end == true ? 'timeout':''}}" bindtap='buyNowClickEvent'>
   去支付</view>
 </view>

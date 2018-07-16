@@ -14,8 +14,10 @@ Page({
     },
     currentTime:{
       min:15,
-      sec:60
-    }
+      sec:0,
+      end:false
+    },
+    timer:""
   },
 
   /**
@@ -31,10 +33,37 @@ Page({
       imgW: imgW,
       imgH: imgH
     })
+
+    var self = this;
+    var timer = setInterval(function () {
+      self.calTime();
+    }, 1000) //循环间隔 单位ms
+
+    this.setData({
+      timer:timer
+    })
   },
 
   //减时间
-  
+  calTime:function() {
+    console.log('en..')
+    var currentTime = this.data.currentTime;
+    if (currentTime.sec == 0) {
+      if(currentTime.min == 0) {
+        currentTime.end = true;
+        clearInterval(this.data.timer);
+      }else {
+        currentTime.min = currentTime.min - 1;
+        currentTime.sec = 59;
+      }
+    }else {
+      currentTime.sec = currentTime.sec - 1;
+    }
+    
+    this.setData({
+      currentTime: currentTime
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -60,7 +89,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+    clearInterval(this.data.timer);
   },
 
   /**

@@ -16,7 +16,7 @@
   <image src='../../images/home/scan.png'></image>
 </view>
 <!--定位  -->
-<view class='location-view tac' bindtap='locationClickEvent'>
+<view class='location-view tac' bindtap='locationClickEvent' wx:if="{{cityName.length > 0}}">
   <label>{{cityName}}</label>
    <image src='../../images/down.png'></image> 
 </view>
@@ -57,7 +57,7 @@
 
 <!--推荐课程  -->
 <view class='recommend'>
-  <view class='rec-top boxsize' style='padding:0rpx {{contentPadding}}px 0rpx;'>
+  <view class='rec-top boxsize' style='padding:0rpx 15px 0rpx;'>
     <label class='rec-title'>推荐课程</label>
     <view class='rec-more' bindtap='moreCourseClickEvent'>更多
       <image src="../../images/home/arrow.png"></image>
@@ -65,7 +65,9 @@
   </view>
 
   <!--课程列表  -->
-  <courseList contentPadding='{{contentPadding}}' contentItemW='{{contentItemW}}' recArr='{{recArr}}' bind:courseClickEvent="courseClickEvent">
+  <courseList  recArr='{{recArr}}' 
+  bind:courseClickEvent="courseClickEvent"
+  >
 
   </courseList>
 
@@ -76,7 +78,7 @@
 </view>
 
 <!--热门课程  -->
-<view class='hot boxsize' style='padding:0px {{contentPadding}}px 10px;'>
+<view class='hot boxsize' style='padding:0px 15px 10px;'>
  <view class='rec-top boxsize'>
     <label class='rec-title'>热门课程</label>
     <view class='rec-more' bindtap='moreCourseClickEvent'>更多

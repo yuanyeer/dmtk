@@ -37,5 +37,5 @@
 <!--底部支付  -->
 <view class='bot-pay'>
   <label class='price-label fg-orange'>总价 : ￥46000</label>
-  <button class='pay-btn tac bg-green'>确认支付</button>
+  <button class='pay-btn tac bg-green' bindtap='payBtnClickEvent'>确认支付</button>
 </view>

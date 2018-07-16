@@ -48,7 +48,7 @@
   <!--门店列表  -->
   <view class='store-container' wx:if="{{curPage == 1}}">
     <view class='store-cell row-view boxsize' wx:for="{{storeArr}}" wx:key="id"  bindtap='storeCellClickEvent'>
-    <image class='store-image' src="{{item.image}}" style="width:{{cellImgW}}px;height:{{cellImgH}}px"></image>
+    <image class='store-image' src="{{item.image}}" style="width:{{ui_setting.store_imageW}}px;height:{{ui_setting.store_imageH}}px"></image>
     <view class='store-info col-view'>
       <label class='store-title fg-black'>{{item.title}}</label>
       <view class='store-detail row-view'>

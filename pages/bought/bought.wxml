@@ -1,8 +1,6 @@
 <view class='page-content boxsize'>
 <orderList
-  orderArr="{{orderArr}}"
-  imgH='{{imgH}}'
-  imgW='{{imgW}}'
+  orderArr="{{orders}}"
 ></orderList>
 </view>
 

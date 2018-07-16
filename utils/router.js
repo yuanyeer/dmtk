@@ -1,3 +1,7 @@
+/**
+ * 全局路由配置文件
+ * 
+ */
 var match = {
   home:"../home/home",
   my:"../my/my",
@@ -20,7 +24,8 @@ var match = {
   kefu:"../kefu/kefu",
   record:"../courses/record",
   buy:"../buy/buy",
-  test:"../location/test"
+  test:"../location/test",
+  ad: "../home/ad"
 }
 
 // function go(router) {

@@ -1,4 +1,7 @@
 const util = require('../../utils/appTool.js')
+
+const ui = require('../../utils/ui-setting.js')
+const test = require('../../utils/test.js')
 const App = getApp()
 Page({
 
@@ -7,155 +10,10 @@ Page({
    */
   data: {
     topArr:[{title:"可使用",isSel:true,tag:0},{title:"已失效",isSel:false,tag:1}],
-    orderArr:[{
-      top:"世宇乐园",
-      url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title:"英语早教班，坚持全英对话学习11",
-      next:"7.词语性转化记忆技巧",
-      complete:"6.单词快速记忆"
-    }, {
-        top: "世宇乐园",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      next: "7.词语性转化记忆技巧",
-      complete: "6.单词快速记忆"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆"
-      },
-      {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆"
-      }],
-
-    enableOrders: [{
-      top: "世宇乐园",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      next: "7.词语性转化记忆技巧",
-      complete: "6.单词快速记忆",
-      isDone: true,
-      doneText: "宝宝好棒，完成了所有课程"
-    }, {
-      top: "世宇乐园",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      next: "7.词语性转化记忆技巧",
-      complete: "6.单词快速记忆",
-      isDone: true,
-      doneText: "宝宝好棒，完成了所有课程"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆",
-        isDone: true,
-        doneText: "宝宝好棒，完成了所有课程"
-    }, {
-      top: "世宇乐园",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      next: "7.词语性转化记忆技巧",
-      complete: "6.单词快速记忆",
-      isDone: true,
-      doneText: "宝宝好棒，完成了所有课程"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆",
-        isDone: true,
-        doneText: "宝宝好棒，完成了所有课程"
-    }, {
-      top: "世宇乐园",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      next: "7.词语性转化记忆技巧",
-      complete: "6.单词快速记忆",
-      isDone: true,
-      doneText: "宝宝好棒，完成了所有课程"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆",
-        isDone: true,
-        doneText: "宝宝好棒，完成了所有课程"
-    }, {
-      top: "世宇乐园",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      next: "7.词语性转化记忆技巧",
-      complete: "6.单词快速记忆",
-      isDone: true,
-      doneText: "宝宝好棒，完成了所有课程"
-      }, {
-        top: "世宇乐园",
-        url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习",
-        next: "7.词语性转化记忆技巧",
-        complete: "6.单词快速记忆",
-        isDone: true,
-        doneText: "宝宝好棒，完成了所有课程"
-    }, {
-      top: "世宇乐园",
-      url: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习",
-      next: "7.词语性转化记忆技巧",
-      complete: "6.单词快速记忆",
-      isDone: true,
-      doneText: "宝宝好棒，完成了所有课程"
-    }],
-
-      imageW : 0,
-      useBtnClass:"use",
-      unabelBtnClass: "",
-      imgW:0,
-      imgH:0,
       isVip:false,
-      vipW:0,
-      vipH:0,
       orderListTop:0,
-      curPage:0
+      curPage:0,
+      ui_setting:{}
   },
  //顶部分类点击
   orderCatClickEvent:function(e){
@@ -170,48 +28,39 @@ Page({
         curPage = item.tag;
       }
     }
+
+   
     this.setData({
       topArr: arr,
-      curPage: curPage
+      curPage: curPage,
+      
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    var orderListTop = this.data.isVip == true? 20 : 30;
+  
     this.setData({
-      isVip: App.data.isVip
-    })
-    var screenW = util.getScrW();
-
-    var imgW = screenW * 0.44;
-    var imgH = imgW * 100 / 165;
-
-    console.log(imgW +"--" +imgH)
-
-    var vipW = screenW * 0.92;
-    var vipH = vipW * 200 / 690;
-
-    var orderListTop = 20;
-    if(this.data.isVip) {
-      orderListTop = 30;
-    }
-    
-    this.setData({
-      imgW: imgW,
-      imgH: imgH,
-      vipW: vipW,
-      vipH: vipH,
       orderListTop: orderListTop,
-      
+      isVip: App.data.isVip,
+      ui_setting: App.data.ui.order,
+      orders: test.orders(),
+      enableOrders: test.enableOrders()
     })
-    
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
   
+  },
+  //vip点击
+  vipClickEvent:function(){
+    App.data.router.go('vip')
   },
 
   /**

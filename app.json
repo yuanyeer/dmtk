@@ -3,7 +3,6 @@
     "pages/home/home",
     "pages/my/my",
     "pages/order/order",
-    "pages/index/index",
     "pages/location/location",
     "pages/search_resutl/search_result",
     "pages/scan/scan",
@@ -21,7 +20,9 @@
     "pages/kefu/kefu",
     "pages/courses/record",
     "pages/buy/buy",
-    "pages/location/test"
+    "pages/location/test",
+    "pages/login/login",
+    "pages/home/ad"
   ],
   "window": {
     "backgroundTextStyle": "black",

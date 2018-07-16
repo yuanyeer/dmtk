@@ -1,82 +1,21 @@
 // pages/courses/record.js
 const util = require('../../utils/appTool.js')
+const test = require('../../utils/test.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dataArr: [{
-      store: "世宇乐园（政安店）",
-      image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习11",
-      tag: "第六课时",
-      date: "2018-09-26 09:55",
-      orderId:"45645645646546521312312",
-      state:"0",
-      stateText:"完成"
-    }, {
-      store: "世宇乐园（政安店）",
-      image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习11",
-      tag: "第六课时",
-      date: "2018-09-26 09:55",
-      orderId: "45645645646546521312312",
-      state: "0",
-      stateText: "完成"
-      }, {
-        store: "世宇乐园（政安店）",
-        image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习11对话学习11对话学习11",
-        tag: "第六课时",
-        date: "2018-09-26 09:55",
-        orderId: "45645645646546521312312",
-        state: "0",
-        stateText: "完成"
-    }, {
-      store: "世宇乐园（政安店）",
-      image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习11",
-      tag: "第六课时",
-      date: "2018-09-26 09:55",
-      orderId: "45645645646546521312312",
-      state: "0",
-      stateText: "完成"
-      }, {
-        store: "世宇乐园（政安店）",
-        image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-        title: "英语早教班，坚持全英对话学习11",
-        tag: "第六课时",
-        date: "2018-09-26 09:55",
-        orderId: "45645645646546521312312",
-        state: "0",
-        stateText: "完成"
-    }, {
-      store: "世宇乐园（政安店）",
-      image: "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2505161557,4147460724&fm=27&gp=0.jpg",
-      title: "英语早教班，坚持全英对话学习11",
-      tag: "第六课时",
-      date: "2018-09-26 09:55",
-      orderId: "45645645646546521312312",
-      state: "0",
-      stateText: "完成"
-    }],
-    imgW: 0,
-    imgH: 0,
+    dataArr: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var screenW = util.getScrW();
-
-    var imgW = screenW * 0.44;
-    var imgH = imgW * 200 / 330;
-
     this.setData({
-      imgW: imgW,
-      imgH: imgH
+      dataArr:test.record()
     })
   },
 

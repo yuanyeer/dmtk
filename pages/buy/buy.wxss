@@ -98,3 +98,6 @@
   color: white;
   font-size: 32rpx;
 }
+.timeout {
+  background-color: lightgray;
+}

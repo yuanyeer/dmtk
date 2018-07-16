@@ -1,4 +1,5 @@
 // component/setcell/setcell.js
+const App = getApp()
 Component({
   /**
    * 组件的属性列表
@@ -8,9 +9,9 @@ Component({
       type: Array,
       value: []
     },
-    cellHeight:{
-      type:Number,
-      value:58
+    ui_setting:{
+      type:Object,
+      value: App.data.ui.set_cell
     }
   },
 

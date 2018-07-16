@@ -1,6 +1,6 @@
 /*cell  */
 .set-cell {
-  height: 100rpx;
+  /* height: 100rpx; */
   /* background-color: #abc; */
   align-items: center;
   display: flex;

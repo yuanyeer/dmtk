@@ -23,7 +23,7 @@
       <view class='subTitle'>门店图片</view>
       <view class='store-images row-view'>
         <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
-          <image class='store-image-item' wx:for="{{storeImages}}" wx:key="id" src="{{item}}" bindtap='storeImgClickEvent' data-img="{{item}}" style="width:{{storeImgW}}px;height:{{storeImgH}}px"></image>
+          <image class='store-image-item' wx:for="{{storeImages}}" wx:key="id" src="{{item}}" bindtap='storeImgClickEvent' data-img="{{item}}" style="width:{{ui_setting.imageW}}px;height:{{ui_setting.imageH}}px"></image>
         </scroll-view>
       </view>
 
@@ -32,7 +32,7 @@
       <view class='teacher-container boxsize'>
         <scroll-view scroll-x style="width:100%;white-space: nowrap">
           <view class='teacher-cell' wx:for="{{teachers}}" wx:key="id">
-            <image src='{{item.img}}' style="width:{{storeImgH}}px;height:{{storeImgW}}px"></image>
+            <image src='{{item.img}}' style="width:{{ui_setting.teacher_imageW}}px;height:{{ui_setting.teacher_imageH}}px"></image>
             <view class='tea-type fg-black'>{{item.cate}}
               <label class='tea-tag fg-green border-green tag boxsize' wx:if="{{item.tag != null}}">{{item.tag}}</label>
             </view>
@@ -52,6 +52,6 @@
 
 
   <!--课程列表  -->
-  <courseList contentPadding='{{contentPadding}}' contentItemW='{{contentItemW}}' recArr='{{recArr}}' bind:courseClickEvent="courseClickEvent" wx:if="{{curPage == 1}}" marginTop="10">
+  <courseList recArr='{{recArr}}' bind:courseClickEvent="courseClickEvent" wx:if="{{curPage == 1}}" marginTop="10">
   </courseList>
 </view>

@@ -5,17 +5,13 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    ui_setting:{
+      type:Object,
+      value:App.data.ui.order
+    },
     orderArr:{
       type:Array,
       value:[]
-    },
-    imgH:{
-      type:Number,
-      value:""
-    },
-    imgW: {
-      type: Number,
-      value: ""
     },
     marginTop:{
       type:String,

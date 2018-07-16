@@ -7,8 +7,6 @@
 </view>
 
 <courseList
-  contentPadding='{{contentPadding}}'
-  contentItemW='{{contentItemW}}'
   recArr='{{recArr}}'
   marginTop="60"
 ></courseList>

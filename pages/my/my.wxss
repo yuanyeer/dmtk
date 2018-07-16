@@ -11,7 +11,7 @@ page {
 .user-icon {
   width: 120rpx;
   height: 120rpx;
-  background-color: #cca;
+  /* background-color: #cca; */
   border-radius: 50%;
 }
 .top label{
@@ -19,7 +19,14 @@ page {
   color: #fff;
   margin-top: 10rpx;
 }
-
+.testbtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200rpx;
+  height: 100rpx;
+  background-color: #abc;
+}
 
 /*VIP  */
 .ad {

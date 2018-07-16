@@ -5,16 +5,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    ui_setting:{
+      type: String,
+      value: App.data.ui.course
+    },
     marginTop:{
       type:String,
-      value:""
-    },
-    contentPadding:{
-      type:String,
-      value:""
-    },
-    contentItemW:{
-      type: String,
       value:""
     },
     recArr:{

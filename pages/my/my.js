@@ -20,9 +20,19 @@ Page({
         icon: "../../images/my/set.png",
         title: "设置", link: "src:ssss", idx : 0
       }],
-      isVip:true
+      isVip:true,
+      userInfo:"",
+      canIUse: wx.canIUse('button.open-type.getUserInfo'),
+      hasUserInfo:false
   },
-
+  getUserInfo: function (e) {
+    console.log(e)
+    App.data.userInfo = e.detail.userInfo;
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo:true
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -30,6 +40,22 @@ Page({
     this.setData({
       isVip: App.data.isVip
     })
+    if (App.data.userInfo) {
+      this.setData({
+        userInfo: App.data.userInfo,
+        hasUserInfo:true
+      })
+    }else {
+      var self = this;
+      App.userInfoReadyCallback = res => {
+
+        self.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+        console.log(self.data.userInfo)
+      }
+    }
 
   },
   setCellClickEvent:function(e) {

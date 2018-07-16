@@ -1,6 +1,8 @@
 // pages/vip/vip.js
 
 const util = require('../../utils/appTool.js')
+
+const App = getApp();
 Page({
 
   /**
@@ -22,6 +24,10 @@ Page({
       vipCardW: vipCardW,
       vipCardH: vipCardH
     })
+  },
+  //支付点击
+  payBtnClickEvent:function() {
+    App.data.router.go('buy')
   },
 
   /**
